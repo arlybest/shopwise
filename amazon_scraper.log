@@ -1,0 +1,81 @@
+2025-02-06 15:57:43,492 - __main__ - INFO - Démarrage du serveur Flask sur le port 5000...
+2025-02-06 15:57:43,779 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 15:57:43,823 - werkzeug - INFO -  * Debugger PIN: 101-044-318
+2025-02-06 15:57:44,085 - __main__ - INFO - Recherche lancée pour le mot-clé : ultrawide monitor
+2025-02-06 15:57:44,086 - __main__ - INFO - Démarrage du scraping pour : ultrawide monitor
+2025-02-06 16:03:58,465 - werkzeug - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/amazon_scraper.py', reloading
+2025-02-06 16:04:06,338 - __main__ - INFO - Démarrage du serveur Flask sur le port 5000...
+2025-02-06 16:04:06,529 - werkzeug - WARNING -  * Debugger is active!
+2025-02-06 16:04:06,561 - werkzeug - INFO -  * Debugger PIN: 101-044-318
+2025-02-06 16:04:07,387 - __main__ - INFO - Recherche lancée pour le mot-clé : ultrawide monitor sur 5 pages.
+2025-02-06 16:04:07,388 - __main__ - INFO - Démarrage du scraping parallèle pour 'ultrawide monitor' sur 5 pages.
+2025-02-06 16:04:07,391 - __main__ - INFO - Démarrage du scraping pour la page 1 avec le terme: ultrawide monitor
+2025-02-06 16:04:07,392 - __main__ - INFO - Démarrage du scraping pour la page 2 avec le terme: ultrawide monitor
+2025-02-06 16:04:07,392 - __main__ - INFO - Démarrage du scraping pour la page 3 avec le terme: ultrawide monitor
+2025-02-06 16:04:07,399 - __main__ - INFO - Démarrage du scraping pour la page 4 avec le terme: ultrawide monitor
+2025-02-06 16:04:07,410 - __main__ - INFO - Démarrage du scraping pour la page 5 avec le terme: ultrawide monitor
+2025-02-06 16:04:57,875 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/roniktakougang/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-02-06 16:05:12,485 - __main__ - INFO - Accès à l'URL: https://www.amazon.com/s?k=ultrawide+monitor&page=3
+2025-02-06 16:05:29,340 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,579 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,582 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,583 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,584 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,586 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,587 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,589 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,590 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,591 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,593 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,593 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,594 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,595 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,597 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:29,597 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:05:30,558 - __main__ - INFO - Page 3 terminée avec 0 produits extraits.
+2025-02-06 16:05:42,728 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/roniktakougang/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-02-06 16:05:52,767 - __main__ - INFO - Accès à l'URL: https://www.amazon.com/s?k=ultrawide+monitor&page=4
+2025-02-06 16:05:59,875 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/roniktakougang/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-02-06 16:06:16,411 - __main__ - INFO - Accès à l'URL: https://www.amazon.com/s?k=ultrawide+monitor&page=1
+2025-02-06 16:06:18,275 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,295 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,296 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,297 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,303 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,307 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,310 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,311 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,312 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,312 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,313 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,353 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,355 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,361 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,363 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:18,375 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:06:19,149 - __main__ - INFO - Page 4 terminée avec 0 produits extraits.
+2025-02-06 16:08:16,488 - __main__ - ERROR - Page 1 a généré une exception: HTTPConnectionPool(host='localhost', port=56707): Read timed out. (read timeout=120)
+2025-02-06 16:08:22,654 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/roniktakougang/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-02-06 16:08:36,511 - __main__ - INFO - Accès à l'URL: https://www.amazon.com/s?k=ultrawide+monitor&page=5
+2025-02-06 16:08:46,566 - undetected_chromedriver.patcher - INFO - patching driver executable /Users/roniktakougang/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+2025-02-06 16:09:05,717 - __main__ - INFO - Accès à l'URL: https://www.amazon.com/s?k=ultrawide+monitor&page=2
+2025-02-06 16:09:26,079 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,080 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,081 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,082 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,083 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,099 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,100 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,100 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,101 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,103 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,111 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,112 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,113 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,114 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,115 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:26,115 - __main__ - ERROR - Erreur lors de l'extraction d'un produit : 'NoneType' object has no attribute 'text'
+2025-02-06 16:09:27,149 - __main__ - INFO - Page 2 terminée avec 0 produits extraits.
+2025-02-06 16:10:32,711 - __main__ - ERROR - Page 5 a généré une exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-06 16:10:32,722 - __main__ - INFO - Scraping terminé. 0 produits extraits au total.
+2025-02-06 16:10:32,769 - werkzeug - INFO - 127.0.0.1 - - [06/Feb/2025 16:10:32] "GET /search?query=ultrawide+monitor HTTP/1.1" 200 -
