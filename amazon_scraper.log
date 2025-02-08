@@ -4789,3 +4789,216 @@
 2025-02-08 18:09:27,479 - INFO - ✔ Produit extrait : MOSDART 1TB USB3.1 Fast Speed C and A Dual Flash Drive, exFAT Memory Stick with Keychain and LED Indicator, for iPhone 15 and 16, Android Phone, iPad, MacBook, and Other Laptops, Hot Pink - $85.99 -> 51,594.00 FCFA
 2025-02-08 18:09:27,485 - INFO - ✔ Produit extrait : Nekteck 60W USB C Charger [GaN Tech], PD 3.0 Fast Charging [USB-IF & ETL Certified] with Foldable Plug, Compatible with MacBook Air/Pro, iPhone 15 - $27.99 -> 16,794.00 FCFA
 2025-02-08 18:09:31,311 - INFO - 127.0.0.1 - - [08/Feb/2025 18:09:31] "GET /search?query=macbook%0A HTTP/1.1" 200 -
+2025-02-08 18:20:55,876 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.22:5000
+2025-02-08 18:20:55,879 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 18:20:55,884 - INFO -  * Restarting with stat
+2025-02-08 18:20:57,024 - WARNING -  * Debugger is active!
+2025-02-08 18:20:57,047 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 18:24:29,785 - INFO - 🔍 Démarrage du scraping pour : telephone
+2025-02-08 18:24:29,785 - INFO - 🌐 Récupération de la page 1 : https://glotelho.cm/search?q=telephone&limit=40&page=1
+2025-02-08 18:24:29,786 - INFO - 🔍 Début du scraping Walmart pour: telephone
+2025-02-08 18:24:30,026 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=telephone&page=1
+2025-02-08 18:24:30,058 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=telephone&page=2
+2025-02-08 18:24:30,061 - INFO - 🌐 Récupération de la page 1 : https://www.amazon.com/s?k=telephone&page=1
+2025-02-08 18:24:30,062 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=telephone&page=3
+2025-02-08 18:24:30,065 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=telephone&page=4
+2025-02-08 18:24:30,069 - INFO - 🌐 Récupération de la page 2 : https://www.amazon.com/s?k=telephone&page=2
+2025-02-08 18:24:30,071 - INFO - 🌐 Récupération de la page 3 : https://www.amazon.com/s?k=telephone&page=3
+2025-02-08 18:24:30,073 - INFO - 🌐 Récupération de la page 4 : https://www.amazon.com/s?k=telephone&page=4
+2025-02-08 18:24:30,074 - INFO - 🌐 Récupération de la page 5 : https://www.amazon.com/s?k=telephone&page=5
+2025-02-08 18:24:30,077 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=telephone&page=5
+2025-02-08 18:24:33,238 - INFO - 📄 Scraping de la page 2...
+2025-02-08 18:24:33,240 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 18:24:33,241 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 18:24:33,243 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 18:24:33,248 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 18:24:33,250 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 18:24:33,251 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 18:24:35,372 - INFO - 📄 Scraping de la page 1...
+2025-02-08 18:24:35,385 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 18:24:35,516 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 18:24:35,517 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 18:24:35,518 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 18:24:35,590 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 18:24:35,592 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 18:24:35,807 - INFO - 📄 Scraping de la page 3...
+2025-02-08 18:24:35,820 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 18:24:35,821 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 18:24:35,860 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 18:24:35,861 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 18:24:35,861 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 18:24:35,906 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 18:24:35,923 - INFO - 📄 Scraping de la page 4...
+2025-02-08 18:24:35,962 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Link2Cell Bluetooth, Voice Assistant and Advanced Call Blocking, Expandable System with 4 Handsets - KX-TGD864W (White) - $119.99 -> 71,994.00 FCFA
+2025-02-08 18:24:35,971 - INFO - ✔ Produit extrait : kSafe Time Locking Container, Break Bad Habits - Quit Smoking, Snacking, Drinking & Gaming Addiction, Phone Jail, Medication Lock Box, Family Time (XL, White Lid + 12.3” Clear Base) - $79.00 -> 47,400.00 FCFA
+2025-02-08 18:24:35,981 - INFO - ✔ Produit extrait : VTech DECT 6.0 Cordless Phone - Blue Display, Big Buttons, Speakerphone, Caller ID, Easy Wall Mount, 1000ft Range - White/Grey - $17.24 -> 10,344.00 FCFA
+2025-02-08 18:24:35,983 - INFO - ✔ Produit extrait : SMPL Landline Photo Memory Big Button Phone for Seniors - One-Touch Dialing, Large Buttons, Amplify by Call, Alzheimer's, Dementia - Ideal Phone for Seniors (Model 56010) - $49.99 -> 29,994.00 FCFA
+2025-02-08 18:24:35,986 - INFO - ✔ Produit extrait : Home Intuition Classic Corded Phone for Hearing Impaired Telephone for Seniors with Extra Loud Ringer (Ash) - $42.95 -> 25,770.00 FCFA
+2025-02-08 18:24:35,988 - INFO - ✔ Produit extrait : Yealink T46U IP Phone, 16 VoIP Accounts. 4.3-Inch Color Display. Dual USB 2.0, Dual-Port Gigabit Ethernet, 802.3af PoE, Power Adapter Not Included (SIP-T46U) - $134.99 -> 80,994.00 FCFA
+2025-02-08 18:24:35,990 - INFO - ✔ Produit extrait : Corded Phone for Home, Durable landline Phone with Large Buttons for Seniors, Versatile Mini Phone for The Home, Office, and More(White) - $14.99 -> 8,994.00 FCFA
+2025-02-08 18:24:36,072 - INFO - ✔ Produit extrait : Sangyn Retro Rotary Landline Phone 1960s Vintage Telephone Old Fashioned Corded Phones with Mechanical Ringer for Home Office Desk, Black - $42.98 -> 25,788.00 FCFA
+2025-02-08 18:24:36,076 - INFO - ✔ Produit extrait : VTech Connect to Cell DS6771-3 DECT 6.0 Cordless Phone - Black, Silver, 6.9" x 4" x 6.6" - $97.31 -> 58,386.00 FCFA
+2025-02-08 18:24:36,081 - INFO - ✔ Produit extrait : AT&T CL2909 Corded Phone with Speakerphone and Caller ID/Call Waiting, White - $35.00 -> 21,000.00 FCFA
+2025-02-08 18:24:36,086 - INFO - ✔ Produit extrait : Nortel M5316 Business Telephone Black (Nt4x42ca) - $99.92 -> 59,952.00 FCFA
+2025-02-08 18:24:36,090 - INFO - ✔ Produit extrait : PUSOKEI Corded Standard Phone with Answering System and Caller ID, Desk Telephone Caller ID Large Buttons Tilt Display Corded Landline for Home Office Hotel Rooms - $32.17 -> 19,302.00 FCFA
+2025-02-08 18:24:36,091 - INFO - ✔ Produit extrait : Panasonic KX-TSC11B Corded Phone with Caller ID, Black - $26.01 -> 15,606.00 FCFA
+2025-02-08 18:24:36,122 - INFO - ✔ Produit extrait : VTech Super Long Range 5 Handset DECT 6.0 Cordless Phone for Home with Answering Machine, 2300 ft Range, Call Blocking, Bluetooth, Headset Jack, Power Backup, Intercom, Expandable to 12 HS - $98.68 -> 59,208.00 FCFA
+2025-02-08 18:24:36,122 - INFO - 📄 Scraping de la page 5...
+2025-02-08 18:24:36,158 - INFO - ✔ Produit extrait : Sangyn Vintage Corded Phones for Landline Old Telephone with Mechanical Ringer Receiver Volume Adjustable Retro Analog Desk Phone for Home House School, Red - $35.98 -> 21,588.00 FCFA
+2025-02-08 18:24:36,189 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 18:24:36,218 - INFO - ✔ Produit extrait : VTech CD1113 Corded Phone for Home Office - Easy-to-Use Telephone with Caller ID/Call Waiting, 13 Speed Dial Keys, No AC Power Required, Flash, Volume Control, Hearing Aid Compatible,Wall-mount, Black - $14.95 -> 8,970.00 FCFA
+2025-02-08 18:24:36,219 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 18:24:36,234 - INFO - ✔ Produit extrait : Traditional Red Landline Phone, Retro Corded Telephone with Message Indicator, Classic 2500 Analog Desk Phone, Vintage Corded Desk Telephone Large Button, Old Red Telephone Landline for School,Home - $36.97 -> 22,182.00 FCFA
+2025-02-08 18:24:36,251 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 18:24:36,265 - INFO - ✔ Produit extrait : Big Button Phone for Seniors, Corded Landline Telephone with Handsfree Function and 9 Groups of Memory, One-Touch Dialling,Suitable People with Vision Disorders/Hearing Damage (EX-LD-858HF) - $29.99 -> 17,994.00 FCFA
+2025-02-08 18:24:36,303 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 18:24:36,305 - INFO - ✔ Produit extrait : VTech Cordless Phone for Home with Caller ID/Call Waiting, CS6919-16 Landline Phones, Illuminated Keypad, Full Duplex Speakerphone, Wall Mount, Red - $19.80 -> 11,880.00 FCFA
+2025-02-08 18:24:36,306 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 18:24:36,307 - INFO - ✔ Produit extrait : Advanced Home Telephone, Wired Novelty Cute Sexy Lip Phone, Wire Phone Home Decoration for Home Hotel Office Decor Gift (Electroplated Pink) - $18.99 -> 11,394.00 FCFA
+2025-02-08 18:24:36,308 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 18:24:36,315 - INFO - ✔ Produit extrait : RocketBus 4 BK-40AAABU 1.2V 400mAh Ni-MH Rechargeable Battery Packs for Panasonic Cordless Phone System BK40AAABU - $17.95 -> 10,770.00 FCFA
+2025-02-08 18:24:36,318 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 6Pack AAA NiMH Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $23.89 -> 14,334.00 FCFA
+2025-02-08 18:24:36,519 - INFO - 📄 Scraping de la page 4...
+2025-02-08 18:24:36,521 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 18:24:36,522 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 18:24:36,524 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 18:24:36,524 - INFO - 📄 Scraping de la page 1...
+2025-02-08 18:24:36,527 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 18:24:36,558 - INFO - ✔ Produit extrait : AT&T BL102-2 DECT 6.0 2-Handset Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID Announcer, Audio Assist, Intercom, and Unsurpassed Range, Silver/Black - $42.95 -> 25,770.00 FCFA
+2025-02-08 18:24:36,581 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 18:24:36,584 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Advanced Call Block, Bilingual Caller ID and Easy to Read High-Contrast Display, Expandable System with 2 Handsets - KX-TGD832M (Metallic Black) - $59.99 -> 35,994.00 FCFA
+2025-02-08 18:24:36,592 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 18:24:36,618 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Advanced Call Block, One-Ring Scam Alert, and 2-Way Recording with Answering Machine, 4 Handsets - KX-TGF944B (Black) - $129.99 -> 77,994.00 FCFA
+2025-02-08 18:24:36,635 - INFO - ✔ Produit extrait : AT&T TRIMLINE 210 Corded Home Phone, No AC Power Required, Improved Easy-Wall-Mount, Lighted Big Button Keypad, 13 SpeedDial Keys, Last Number Redial, Mute, Flash, Volume Control, Beige - $16.95 -> 10,170.00 FCFA
+2025-02-08 18:24:36,642 - INFO - ✔ Produit extrait : [New] VTech VG131-11 DECT 6.0 Cordless Phone - Bluetooth Connection, Blue-White Display, Big Buttons, Full Duplex, Caller ID, Easy Wall Mount, 1000ft Range (Black) - $19.95 -> 11,970.00 FCFA
+2025-02-08 18:24:36,646 - INFO - ✔ Produit extrait : VTech CS6719-2 2-Handset Expandable Cordless Phone with Caller ID/Call Waiting, Handset Intercom & Backlit Display/Keypad, Silver - $38.95 -> 23,370.00 FCFA
+2025-02-08 18:24:36,649 - INFO - ✔ Produit extrait : Panasonic Corded/Cordless Phone with Advanced Call Block, 2-Way Recording and Digital Answering Machine, 2 Handsets Expandable up to 6 Cordless Handsets - KX-TGF852B (Black) - $84.99 -> 50,994.00 FCFA
+2025-02-08 18:24:36,668 - INFO - ✔ Produit extrait : AT&T CL4940 Corded Standard Phone with Answering System and Backlit Display, White - $39.95 -> 23,970.00 FCFA
+2025-02-08 18:24:36,717 - INFO - ✔ Produit extrait : AT&T GL2101-2 DECT 6.0 2-Handset Cordless Home Phone with Call Block, Caller ID, Full-Duplex Handset Speakerphone, 2" White Backlit Display, Lighted Keypad (Graphite & Black) - $39.95 -> 23,970.00 FCFA
+2025-02-08 18:24:36,784 - INFO - ✔ Produit extrait : AT&T CL2940 Corded Phone with Speakerphone, Extra-Large Tilt Display/Buttons, Caller ID/Call Waiting and Audio Assist, Black - $36.99 -> 22,194.00 FCFA
+2025-02-08 18:24:36,830 - INFO - ✔ Produit extrait : Panasonic Compact Cordless Phone with DECT 6.0, 1.6" Amber LCD and Illuminated HS Keypad, Call Block, Caller ID, Multiple Display Languages - 1 Handset - KX-TGB810S (Black/Silver) - $24.99 -> 14,994.00 FCFA
+2025-02-08 18:24:36,884 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Link2Cell Bluetooth, Voice Assistant and Advanced Call Blocking, Expandable System with 4 Handsets - KX-TGD864W (White) - $119.99 -> 71,994.00 FCFA
+2025-02-08 18:24:36,886 - INFO - ✔ Produit extrait : VTech VS112-27 DECT 6.0 Bluetooth 2 Handset Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID, Intercom and Connect to Cell (White) - $39.95 -> 23,970.00 FCFA
+2025-02-08 18:24:36,888 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Link2Cell Bluetooth, Voice Assistant and Advanced Call Blocking, Expandable System with 4 Handsets - KX-TGD864W (White) - $119.99 -> 71,994.00 FCFA
+2025-02-08 18:24:36,889 - INFO - ✔ Produit extrait : AT&T EL51203 2 Handset DECT 6.0 Cordless Home Phone Full-Duplex Handset Speakerphone, Backlit Display, Lighted Keypad, Caller ID/Call Waiting, Phonebook, Eco Mode, Voicemail Key, Quiet Mode,Intercom - $36.62 -> 21,972.00 FCFA
+2025-02-08 18:24:36,937 - INFO - ✔ Produit extrait : AT&T TRIMLINE 213 Corded Home Phone with Extra Big Buttons & Visual Ringer. No AC Power Required, Improved Easy-Wall-Mount, Lighted Keypad, 10 Speed Dial Keys, Volume Control, Senior Friendly. White - $19.01 -> 11,406.00 FCFA
+2025-02-08 18:24:36,969 - INFO - ✔ Produit extrait : Panasonic DECT 6.0 Expandable Cordless Phone System with Answering Machine and Call Blocking - 3 Handsets - KX-TGE633M (Metallic Black) - $99.99 -> 59,994.00 FCFA
+2025-02-08 18:24:36,985 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Advanced Call Block, Bilingual Caller ID and Easy to Read Large High-Contrast Display, Expandable System with 1 Handset - KX-TGD810B (Black) - $29.99 -> 17,994.00 FCFA
+2025-02-08 18:24:37,049 - INFO - ✔ Produit extrait : Plantronics - Voyager 4210 UC USB-A with Charge Stand (Poly) - Bluetooth Single-Ear (Monaural) Headset - Connect to PC, Mac, & Desk Phone - Noise Canceling - Works with Teams, Zoom & more - $119.99 -> 71,994.00 FCFA
+2025-02-08 18:24:37,076 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 6Pack AAA NiMH Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $23.89 -> 14,334.00 FCFA
+2025-02-08 18:24:37,084 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 2Pack NiMH AAA Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $11.89 -> 7,134.00 FCFA
+2025-02-08 18:24:37,391 - INFO - 📄 Scraping de la page 2...
+2025-02-08 18:24:37,405 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Link2Cell Bluetooth, Voice Assistant and Advanced Call Blocking, Expandable System with 4 Handsets - KX-TGD864W (White) - $119.99 -> 71,994.00 FCFA
+2025-02-08 18:24:37,419 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 2Pack NiMH AAA Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $11.89 -> 7,134.00 FCFA
+2025-02-08 18:24:37,432 - INFO - ✔ Produit extrait : VTech VG208 DECT 6.0 Corded/Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID, Large Backlit Display, Duplex Speakerphone, Intercom, Line-Power(Silver/Black) - $54.95 -> 32,970.00 FCFA
+2025-02-08 18:24:37,440 - INFO - ✔ Produit extrait : Panasonic Expandable Cordless Phone System with Amber Backlit Display – 2 Handsets – KX-TGC352B (Black) - $44.99 -> 26,994.00 FCFA
+2025-02-08 18:24:37,464 - INFO - ✔ Produit extrait : VTech CS6529-4B 4-Handset DECT 6.0 Cordless Phone with Answering System and Caller ID, Expandable up to 5 Handsets, Wall-Mountable, Blue/Green/Red/Silver - $89.95 -> 53,970.00 FCFA
+2025-02-08 18:24:37,487 - INFO - ✔ Produit extrait : Panasonic Cordless Phone, Easy to Use with Large Display and Big Buttons, Flashing Favorites Key, Built in Flashlight, Call Block, Volume Boost, Talking Caller ID, 2 Cordless Handsets - KX-TGU433B - $89.99 -> 53,994.00 FCFA
+2025-02-08 18:24:37,537 - INFO - ✔ Produit extrait : Panasonic DECT 6.0 Expandable Cordless Phone System with Answering Machine and Call Blocking - 3 Handsets - KX-TGE633M (Metallic Black) - $99.99 -> 59,994.00 FCFA
+2025-02-08 18:24:37,557 - INFO - ✔ Produit extrait : AT&T CL83507 DECT 6.0 5-Handset Cordless Phone for Home with Dual Keypad Base, Answering Machine, Call Blocking, Caller ID Announcer, Intercom and Long Range, Silver/Black - $101.07 -> 60,642.00 FCFA
+2025-02-08 18:24:37,590 - INFO - ✔ Produit extrait : VTech SN5147 Amplified Corded/Cordless Senior Phone with Answering Machine, Call Blocking, 90dB Extra-loud Visual Ringer, One-touch Audio Assist on Handset up to 50dB, White - $109.95 -> 65,970.00 FCFA
+2025-02-08 18:24:37,603 - INFO - ✔ Produit extrait : AT&T 5-Handset Expandable DECT 6.0 Cordless Home Phone with Large Display, Big Buttons, Answering Machine, Smart Call Blocker, Long Range, Caller ID, Speakerphone, Intercom: CL82518 (Charcoal Black) - $119.95 -> 71,970.00 FCFA
+2025-02-08 18:24:37,679 - INFO - ✔ Produit extrait : AT&T CL82167 Cordless Phone with Answering Machine, Call Blocking, Caller ID Announcer, Intercom and Long Range, Black & Wood Grain Finish - $39.34 -> 23,604.00 FCFA
+2025-02-08 18:24:37,681 - INFO - ✔ Produit extrait : Panasonic DECT 6.0 Expandable Cordless Phone System with Answering Machine and Call Blocking - 3 Handsets - KX-TGE633M (Metallic Black) - $99.99 -> 59,994.00 FCFA
+2025-02-08 18:24:37,701 - INFO - ✔ Produit extrait : AT&T ML17929 2-Line Corded Telephone, Black - $54.75 -> 32,850.00 FCFA
+2025-02-08 18:24:37,737 - INFO - ✔ Produit extrait : VTech IS8151-5 Super Long Range 5 Handset DECT 6.0 Cordless Phone for Home with Answering Machine, 2300 ft Range, Call Blocking, Bluetooth, Headset Jack, Power Backup, Intercom, Expandable to 12 HS - $112.05 -> 67,230.00 FCFA
+2025-02-08 18:24:37,769 - INFO - ✔ Produit extrait : AT&T CL82219 DECT 6.0 2-Handset Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID Announcer, Intercom and Long Range, Black - $50.49 -> 30,294.00 FCFA
+2025-02-08 18:24:37,804 - INFO - ✔ Produit extrait : Panasonic KX-TG994 DECT 6.0 Bluetooth 4-Handset Phone Bundle - N/A -> N/A
+2025-02-08 18:24:37,818 - INFO - ✔ Produit extrait : Panasonic 2-Line Corded/Cordless Phone System with 2 Handsets - Answering Machine, Link2Cell, 3-Way Conference, Call Block, Long Range DECT 6.0, Bluetooth - KX-TG9582B (Black) - $219.99 -> 131,994.00 FCFA
+2025-02-08 18:24:37,851 - INFO - ✔ Produit extrait : White OF-990 Slimline Telephone Wall-Mountable Basic Corded Telephone No AC Power Required, Corded Home Phone - $10.00 -> 6,000.00 FCFA
+2025-02-08 18:24:37,881 - INFO - ✔ Produit extrait : AT&T DL72219 DECT 6.0 2-Handset Cordless Phone for Home with Connect to Cell, Call Blocking, 1.8" Backlit Screen, Big Buttons, intercom, and Unsurpassed Range - $49.95 -> 29,970.00 FCFA
+2025-02-08 18:24:37,926 - INFO - ✔ Produit extrait : VTech AM18447 Main Console 4-Line Expandable Small Business Office Phone System with Answering Machine, Intercom, Auto Attendant & Music on Hold , Black - $149.95 -> 89,970.00 FCFA
+2025-02-08 18:24:37,949 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 6Pack AAA NiMH Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $23.89 -> 14,334.00 FCFA
+2025-02-08 18:24:38,032 - INFO - 🌐 Récupération de la page 2 : https://glotelho.cm/search?q=telephone&limit=40&page=2
+2025-02-08 18:24:38,054 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 4Pack NiMH AAA Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $16.59 -> 9,954.00 FCFA
+2025-02-08 18:24:38,283 - INFO - 📄 Scraping de la page 5...
+2025-02-08 18:24:38,294 - INFO - ✔ Produit extrait : RocketBus 4 BK-40AAABU 1.2V 400mAh Ni-MH Rechargeable Battery Packs for Panasonic Cordless Phone System BK40AAABU - $17.95 -> 10,770.00 FCFA
+2025-02-08 18:24:38,295 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 2Pack NiMH AAA Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $11.89 -> 7,134.00 FCFA
+2025-02-08 18:24:38,296 - INFO - ✔ Produit extrait : AT&T 4- Handset DECT 6.0 Bluetooth Expandable Cordless Phone for Home with Answering Machine, Smart Call Blocking, Caller ID, Intercom and Bluetooth Connect to Cell: BL3112-4 (Champagne Gold/White) - $109.95 -> 65,970.00 FCFA
+2025-02-08 18:24:38,297 - INFO - ✔ Produit extrait : Y043 Corded Landline Telephone for Home, Caller ID/Call Waiting, Easy-to-Use, Speaker, Display, Desk Phone Only (Black) - $23.98 -> 14,388.00 FCFA
+2025-02-08 18:24:38,299 - INFO - ✔ Produit extrait : Landline Phones for Seniors, Adjustability Features, One-Touch Dialling,Big Button Phone for Seniors, Hard of Hearing Retro Telephone Corded Phones, with Handsfree Function (EX-LD-265) - $29.99 -> 17,994.00 FCFA
+2025-02-08 18:24:38,300 - INFO - ✔ Produit extrait : HelloBaby DECT 6.0 Cordless Phone Handset for Home with Caller ID/Call Waiting, Call Block, Full-Duplex Handset Speakerphone, Blue Backlit Display & Big Buttons, Reliable 1000 ft Range - $20.99 -> 12,594.00 FCFA
+2025-02-08 18:24:38,301 - INFO - ✔ Produit extrait : Black OF-990 Slimline Telephone Wall-Mountable Basic Corded Telephone No AC Power Required, Corded Home Phone - $10.00 -> 6,000.00 FCFA
+2025-02-08 18:24:38,303 - INFO - ✔ Produit extrait : Retro Landline Telephone, Old Phone with Ringer Control & Redial, Black Old Phones, Vintage Corded Desk Old Telephone, Retro Phones for Landline, Old Fashioned Phone with Cord - $38.99 -> 23,394.00 FCFA
+2025-02-08 18:24:38,304 - INFO - ✔ Produit extrait : Panasonic 2-Line Integrated Corded Telephone System with 16-Digit LCD, Speakerphone, Clock, Hearing Aid Compatibility and 3-Way Conferencing - KX-TS208W (White) - $64.50 -> 38,700.00 FCFA
+2025-02-08 18:24:38,306 - INFO - ✔ Produit extrait : Retro Rotary Phone – 1960s Style Vintage Rotary Phone – Old-Fashioned Landline Phones for Home, Office, Desk – Retro Corded Phone with Mechanical Ringer - $41.99 -> 25,194.00 FCFA
+2025-02-08 18:24:38,308 - INFO - ✔ Produit extrait : Wx 3011 Antique Bronze Telephone, Noise Reduction Royal Victoria Vintage Landline Phone Desktop Caller Home Office Rotary Dial Phone Handset Turntable Landline - $42.83 -> 25,698.00 FCFA
+2025-02-08 18:24:38,311 - INFO - ✔ Produit extrait : Panasonic DECT 6.0 Expandable Cordless Phone System with Answering Machine and Enhanced Noise Reduction - 5 Handsets - KX-TGE645M (Metallic Black) - $144.99 -> 86,994.00 FCFA
+2025-02-08 18:24:38,313 - INFO - ✔ Produit extrait : Panasonic KX-TS880B Integrated Corded Telephone,Black - $59.99 -> 35,994.00 FCFA
+2025-02-08 18:24:38,316 - INFO - ✔ Produit extrait : Panasonic Expandable Cordless Phone System, Bluetooth Pairing for Wireless Headphones and Hearing Aids, Smart Call Block, Bilingual Talking Caller ID, 2 Handsets - KX-TGD892S, Silver/Black - $89.99 -> 53,994.00 FCFA
+2025-02-08 18:24:38,320 - INFO - ✔ Produit extrait : Corded Basic Landline Phone, TelPal FSK/DTMF Simple Caller ID Telephone with LCD Incoming Call Number Display, Small Desk/Wall Mountable Analog Phone for Home Office (Black) - $15.99 -> 9,594.00 FCFA
+2025-02-08 18:24:38,322 - INFO - ✔ Produit extrait : iSoHo Phones -Hearing Device-Friendly Phone –Gentle on Aching Hands, Easy-to-Press Buttons, Wall-Mountable, Custom Ringtone/Volume, Adjustable Ringer & Call Waiting with Lighted Keypad, Choctaw White - $42.50 -> 25,500.00 FCFA
+2025-02-08 18:24:38,323 - INFO - ✔ Produit extrait : Clarity XLC3.4+ DECT 6.0 Landline Amplified Cordless Phone, Extra-Loud Ringer, Big Buttons Cordless Home Phone, Talking Caller Id & Dual Power Battery - $88.68 -> 53,208.00 FCFA
+2025-02-08 18:24:38,325 - INFO - ✔ Produit extrait : Panasonic Cordless Phone System, Expandable Home Phone with Call Blocking, Bilingual Caller ID and High-Contrast Display, 1 Handset - KX-TGD610B (Black) - $34.49 -> 20,694.00 FCFA
+2025-02-08 18:24:38,328 - INFO - ✔ Produit extrait : Retro Landline Telephone, Sentno 1960's Vintage Corded Dial Phone Classic Old Fashion Telephones Wired Desk Telephone for Office and Home (White) - $38.99 -> 23,394.00 FCFA
+2025-02-08 18:24:38,329 - INFO - ✔ Produit extrait : VTech VS122 DECT 6.0 Retro Design Cordless Phone with Answering System, Smart Call Blocker and Bluetooth Connect to Cell Full-Duplex Speakerphone Landline Phone for Home Office - $49.95 -> 29,970.00 FCFA
+2025-02-08 18:24:38,340 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 6Pack AAA NiMH Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $23.89 -> 14,334.00 FCFA
+2025-02-08 18:24:38,346 - INFO - ✔ Produit extrait : BK-30AAABU NI-MH AAA Rechargeable Battery 1.2V 300mah 4Pack NiMH AAA Batteries for Panasonic Cordless Phones, Remote Controls, Electronics - $16.59 -> 9,954.00 FCFA
+2025-02-08 18:24:38,551 - INFO - 📄 Scraping de la page 3...
+2025-02-08 18:24:38,574 - INFO - ✔ Produit extrait : VT Handset Lifter Compatible Jabra-Dect Wireless Headset and Telephones - $34.99 -> 20,994.00 FCFA
+2025-02-08 18:24:38,575 - INFO - ✔ Produit extrait : AT&T CL84107 DECT 6.0 Expandable Corded/Cordless Phone with Smart Call Blocker, Black/Silver with 1 Handset - $76.95 -> 46,170.00 FCFA
+2025-02-08 18:24:38,578 - INFO - ✔ Produit extrait : Panasonic Cordless Phone with Answering Machine, Advanced Call Block, Bilingual Caller ID and Easy to Read High-Contrast Display, Expandable System with 2 Handsets - KX-TGD832M (Metallic Black) - $59.99 -> 35,994.00 FCFA
+2025-02-08 18:24:38,581 - INFO - ✔ Produit extrait : MKJ Headset for Cisco Phones Dual Ear Landline Headset with Noise Cancelling Microphone for Cisco Telephone CP-7821 7841 7941G 7942G 7945G 7960 7961G 7962G 7965G 7971G 7975G 8841 8865 9971 - $26.99 -> 16,194.00 FCFA
+2025-02-08 18:24:38,583 - INFO - ✔ Produit extrait : Talking On The Telephone / Various - $11.99 -> 7,194.00 FCFA
+2025-02-08 18:24:38,584 - INFO - ✔ Produit extrait : Michael Rabin on the Bell Telephone Hour 1950/54 Complete - $14.98 -> 8,988.00 FCFA
+2025-02-08 18:24:38,587 - INFO - ✔ Produit extrait : Banana Phone Bluetooth Handset for iPhone and Android Mobile Devices (Single Banana) - $39.99 -> 23,994.00 FCFA
+2025-02-08 18:24:38,588 - INFO - ✔ Produit extrait : SpreeTV by MRTC - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,589 - INFO - ✔ Produit extrait : Telephone Address Book: Large Print Phone & Address Book with Tabs Printed for Seniors, Cute Cat Cover - $6.59 -> 3,954.00 FCFA
+2025-02-08 18:24:38,590 - INFO - ✔ Produit extrait : KaFu Cute Candy Telephone Drop Dangle Earrings Weird Funny Acrylic Telephone Earrings Statement Jewelry for Women Girls - $6.99 -> 4,194.00 FCFA
+2025-02-08 18:24:38,591 - INFO - ✔ Produit extrait : MKJ RJ9 Telephone Headsets for Cisco Phone Wired Headphone with Microphone Noise Canceling Dual Ear Call Center Headset with Mic for Cisco 7821 7841 7941G 7942G 7945G 7975G 8841 8865 9975 - $41.99 -> 25,194.00 FCFA
+2025-02-08 18:24:38,597 - INFO - ✔ Produit extrait : Michael Rabin on the Bell Telephone Hour, Vol. 2 - $12.39 -> 7,434.00 FCFA
+2025-02-08 18:24:38,599 - INFO - ✔ Produit extrait : Cute Candy Black Telephone Drop Earrings for Women - Fun 1 Pair Mini Telephone Weird Funny Dangle Earrings (Black) - $7.99 -> 4,794.00 FCFA
+2025-02-08 18:24:38,600 - INFO - ✔ Produit extrait : Address Book With Alphabetical Tabs: Large Print - Large Telephone Address Book for Seniors & Women, to Record Addresses,Phone Numbers, Emails, Birthdays and Notes..., Alphabetical Tab Addresses. - $5.99 -> 3,594.00 FCFA
+2025-02-08 18:24:38,602 - INFO - ✔ Produit extrait : HTC TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,604 - INFO - ✔ Produit extrait : Estink Wired Desk Phone,Wall-Mounted Phone,Portable Thin Phone,Exquisite Workmanship,Abs Retro Landline Phone, Suitable for Home, Office, Company, Hotel (Orange - $14.09 -> 8,454.00 FCFA
+2025-02-08 18:24:38,605 - INFO - ✔ Produit extrait : Old Style Wall Phone-Freely Adjust The Volume Landline Phone, Classic Retro Design Landline Phones for Home, Wall Phones for Landline, Suitable for Living Room, School, Home, Office(Black) - $12.99 -> 7,794.00 FCFA
+2025-02-08 18:24:38,606 - INFO - ✔ Produit extrait : Retro Landline Phone, Yellow Old Fashion Vintage Telephone with Push Dial Keypad Single Line Antique Corded Phones for Home Office Hotel Decor, Home Gift for Seniors - $32.99 -> 19,794.00 FCFA
+2025-02-08 18:24:38,607 - INFO - ✔ Produit extrait : MKJ Cisco Telephone Headset with Microphone Noise Cancelling, Wired Headphone for Call Center Office, Dual Ear Phone Headset with RJ9 Jack for Cisco 7861 7942G 7945G 7960 7961G 7962G 8841 8861 9971 - $36.99 -> 22,194.00 FCFA
+2025-02-08 18:24:38,609 - INFO - ✔ Produit extrait : Sherlock Holmes and the Telephone Murder Mystery (A Sherlock Mystery Book 3) - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,612 - INFO - ✔ Produit extrait : arVin Wireless Game Controller for iOS & Android, Bluetooth Gamepad Joystick with Phone Holder for iPhone 15/14/13/12, Samsung Galaxy S22/S21/S20, One Plus, TCL, Call of Duty, Apex Legends,Direct Play - $17.95 -> 10,770.00 FCFA
+2025-02-08 18:24:38,618 - INFO - ✔ Produit extrait : Faith Telephone - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,620 - INFO - ✔ Produit extrait : Fozehlad Novelty Telephone Shaped Shoulder Bag Funny Retro Phone Crossbody Bag Totes Chain Purse - $22.98 -> 13,788.00 FCFA
+2025-02-08 18:24:38,622 - INFO - ✔ Produit extrait : PUSOKEI Corded Standard Phone with Answering System and Caller ID, Desk Telephone Caller ID Large Buttons Tilt Display Corded Landline for Home Office Hotel Rooms - $32.17 -> 19,302.00 FCFA
+2025-02-08 18:24:38,624 - INFO - ✔ Produit extrait : ornerx Heart Shaped Retro Dial Telephone Music Box with Drawer 7.5" x 7" x 6.7" - $33.56 -> 20,136.00 FCFA
+2025-02-08 18:24:38,628 - INFO - ✔ Produit extrait : Corded Telephone, Desktop Wall Mountable Phone with Clear Sound Call Display Support One Button Redial for Home Office - $21.61 -> 12,966.00 FCFA
+2025-02-08 18:24:38,633 - INFO - ✔ Produit extrait : PTShadow Retro dial telephone Crossbody Shoulder Bag,Pu Movable microphone Purse for Women - $22.99 -> 13,794.00 FCFA
+2025-02-08 18:24:38,636 - INFO - ✔ Produit extrait : Do What I Do Hold Tight and Pretend It's a Plan! Tardis Telephone Phone Booth Police Box 1.2" Enamel Pin Badge - $9.99 -> 5,994.00 FCFA
+2025-02-08 18:24:38,639 - INFO - ✔ Produit extrait : Telephone Wizard - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,642 - INFO - ✔ Produit extrait : 1 Pcs DTMF Converter Pulse Transfer Dual Tone Multiple Frequency Telephone Module - $33.89 -> 20,334.00 FCFA
+2025-02-08 18:24:38,643 - INFO - ✔ Produit extrait : Telephone Witnessing: Letter Writing and Phone Witnessing Organizer for Jehovah's Witnesses. Perfect for doing Field Ministry from Home! Add this ... ... Telephone Witnessing , 100 pages , 6x9 inches - $6.99 -> 4,194.00 FCFA
+2025-02-08 18:24:38,646 - INFO - ✔ Produit extrait : The Telephone Game - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,650 - INFO - ✔ Produit extrait : New York avec toi in the Style of Téléphone - N/A -> N/A
+2025-02-08 18:24:38,652 - INFO - ✔ Produit extrait : SUKUTU Telephone Shaped Purse Shoulder Crossbody Tote Bags Women Retro Phone Top-Handle Handbags for Girls - N/A -> N/A
+2025-02-08 18:24:38,654 - INFO - ✔ Produit extrait : FRANKIE AND THE WITCH FINGERS - Brain Telephone - N/A -> N/A
+2025-02-08 18:24:38,658 - INFO - ✔ Produit extrait : Telephone Triage Protocols for Nurses - N/A -> N/A
+2025-02-08 18:24:38,664 - INFO - ✔ Produit extrait : Telephone Call From Istanbul (2023 Remaster) - N/A -> N/A
+2025-02-08 18:24:38,666 - INFO - ✔ Produit extrait : The Telephone - $20.88 -> 12,528.00 FCFA
+2025-02-08 18:24:38,668 - INFO - ✔ Produit extrait : BBTELStream - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,669 - INFO - ✔ Produit extrait : My God Has A Telephone [Explicit] - N/A -> N/A
+2025-02-08 18:24:38,670 - INFO - ✔ Produit extrait : OTC-tv - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,671 - INFO - ✔ Produit extrait : ATN Live - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,673 - INFO - ✔ Produit extrait : BTEL TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,674 - INFO - ✔ Produit extrait : The Telephone Call (2009 Remaster) - N/A -> N/A
+2025-02-08 18:24:38,675 - INFO - ✔ Produit extrait : NNTV Streaming - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,676 - INFO - ✔ Produit extrait : Fanatical Prospecting: The Ultimate Guide to Opening Sales Conversations and Filling the Pipeline by Leveraging Social Selling, Telephone, Email, Text, and Cold Calling (Jeb Blount) - $15.99 -> 9,594.00 FCFA
+2025-02-08 18:24:38,682 - INFO - ✔ Produit extrait : CKstream - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,684 - INFO - ✔ Produit extrait : South Slope TVNow - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,685 - INFO - ✔ Produit extrait : myCMTV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,686 - INFO - ✔ Produit extrait : Telephone (Kaskade Radio Remix) [feat. Beyoncé] - N/A -> N/A
+2025-02-08 18:24:38,687 - INFO - ✔ Produit extrait : dave simons - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,688 - INFO - ✔ Produit extrait : Telephone tag - N/A -> N/A
+2025-02-08 18:24:38,690 - INFO - ✔ Produit extrait : NCTC TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,691 - INFO - ✔ Produit extrait : Telephone tag - N/A -> N/A
+2025-02-08 18:24:38,692 - INFO - ✔ Produit extrait : Moves - $14.28 -> 8,568.00 FCFA
+2025-02-08 18:24:38,695 - INFO - ✔ Produit extrait : Twin Valley TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,698 - INFO - ✔ Produit extrait : BTC Fiber TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,700 - INFO - ✔ Produit extrait : LVCTA TV - $0.00 -> 0.00 FCFA
+2025-02-08 18:24:38,703 - INFO - ✔ Produit extrait : Mr. Telephone Man - N/A -> N/A
+2025-02-08 18:24:38,709 - INFO - ✔ Produit extrait : The Telephone: An Account of the Phenomena of Electricity, Magnetism, and Sound, as Involved in its Action - $30.95 -> 18,570.00 FCFA
+2025-02-08 18:24:43,100 - INFO - 🌐 Récupération de la page 3 : https://glotelho.cm/search?q=telephone&limit=40&page=3
+2025-02-08 18:24:46,404 - INFO - 192.168.100.27 - - [08/Feb/2025 18:24:46] "GET /search?query=telephone HTTP/1.1" 200 -
+2025-02-08 18:28:07,083 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 18:28:09,327 - INFO -  * Restarting with stat

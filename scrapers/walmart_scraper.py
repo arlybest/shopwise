@@ -126,7 +126,7 @@ def scrape_walmart_record(item):
             "productURL": product_url,
             "imageURL": image_url,
             "source": "Walmart",
-            "sourceLogo": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Walmart_logo.svg"
+            "sourceLogo": "https://1000logos.net/wp-content/uploads/2017/05/Walmart-Logo.png"
         }
     
     except Exception as e:
@@ -193,6 +193,10 @@ def scrape_walmart(search_term):
             time.sleep(0.2)
     
     df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source", "sourceLogo"])
+    
+    # Déduplication : suppression des doublons basés sur l'URL du produit
+    if not df.empty:
+        df = df.drop_duplicates(subset=["productURL"])
     
     # Tri des résultats par prix croissant (en extrayant la valeur numérique du prix)
     def parse_price(price_str):
