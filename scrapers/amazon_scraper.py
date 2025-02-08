@@ -125,7 +125,7 @@ def scrape_records(item):
             "rating": rating,
             "productURL": product_url,
             "imageURL": image_url,
-            "source": "Amazon"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
         }
     
     except Exception as e:
