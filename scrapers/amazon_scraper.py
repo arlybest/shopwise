@@ -1,149 +1,220 @@
-import undetected_chromedriver as uc  # Contourne les protections anti-bot d'Amazon
-from bs4 import BeautifulSoup  # Analyse HTML pour extraire les données
-from selenium.webdriver.chrome.options import Options  # Configuration du navigateur Selenium
-from selenium.webdriver.common.by import By  # Sélecteurs d'éléments
-from selenium.webdriver.support.wait import WebDriverWait  # Attente d'éléments spécifiques
-from selenium.webdriver.support import expected_conditions as EC  # Conditions d'attente
-import time  # Gestion des pauses
-from fake_useragent import UserAgent  # Génère des user-agents aléatoires pour éviter les blocages
-from selenium.common.exceptions import NoSuchElementException, TimeoutException  # Gestion des erreurs Selenium
-from flask import Flask, jsonify, request  # API Flask
-import concurrent.futures  # Exécution concurrente pour accélérer le scraping
+import logging
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import time
+from fake_useragent import UserAgent
+import re  # Pour la recherche d'URL via une expression régulière
+from flask import Flask, jsonify, request
+from flask_cors import CORS  # Pour autoriser les requêtes CORS
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Initialisation de l'application Flask
+# Configuration du logging
+logging.basicConfig(
+    filename="amazon_scraper.log", 
+    level=logging.INFO, 
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+console_handler.setFormatter(formatter)
+logging.getLogger().addHandler(console_handler)
+
+# Création de l'application Flask
 app = Flask(__name__)
+CORS(app)  # Autorise toutes les origines (vous pouvez restreindre en passant des arguments)
 
 def get_url(search_term, page=1):
     """Génère l'URL de recherche Amazon pour le mot-clé donné et la page spécifiée."""
-    template = "https://www.amazon.com/s?k={}&page={}"
-    search_term = search_term.replace(" ", "+")  # Formatage du mot-clé pour l'URL
-    return template.format(search_term, page)
+    base = "https://www.amazon.com/s"
+    search_term = search_term.replace(" ", "+")
+    return f"{base}?k={search_term}&page={page}"
+
+def convert_price_to_fcfa(price_str):
+    """
+    Détecte l'unité de prix et convertit le montant en FCFA.
+    
+    Facteurs de conversion (valeurs approximatives) :
+      - Dollar ($) : 600 FCFA par USD
+      - Euro (€)   : 655.957 FCFA par EUR
+      - Livre sterling (£) : 800 FCFA par GBP
+    """
+    if not price_str or price_str == "N/A":
+        return "N/A"
+    
+    price_str = price_str.strip()
+    conversion_factor = None
+    if "$" in price_str:
+        conversion_factor = 600.0
+        price_numeric_str = price_str.replace("$", "").strip()
+    elif "€" in price_str:
+        conversion_factor = 655.957
+        price_numeric_str = price_str.replace("€", "").strip()
+    elif "£" in price_str:
+        conversion_factor = 800.0
+        price_numeric_str = price_str.replace("£", "").strip()
+    else:
+        conversion_factor = 600.0
+        price_numeric_str = price_str
+
+    # Supprimer tout ce qui n'est pas chiffre, virgule ou point
+    price_numeric_str = re.sub(r"[^\d,\.]", "", price_numeric_str)
+    # S'il y a une seule virgule et pas de point, elle est probablement décimale
+    if price_numeric_str.count(",") == 1 and "." not in price_numeric_str:
+        price_numeric_str = price_numeric_str.replace(",", ".")
+    else:
+        price_numeric_str = price_numeric_str.replace(",", "")
+    
+    try:
+        price_value = float(price_numeric_str)
+        converted_value = price_value * conversion_factor
+        return f"{converted_value:,.2f} FCFA"
+    except Exception as e:
+        logging.error(f"Erreur lors de la conversion du prix '{price_str}': {e}")
+        return price_str
 
 def scrape_records(item):
     """
-    Extrait les informations d'un seul produit en tenant compte de la nouvelle structure HTML.
+    Extrait les informations d'un produit en tenant compte de la nouvelle structure HTML.
     On récupère :
-      - la description et l'URL du produit depuis le conteneur data-cy="title-recipe",
-      - le prix depuis le conteneur data-cy="price-recipe",
-      - la note depuis le span "a-icon-alt",
-      - le nombre d'avis depuis le conteneur data-cy="reviews-block",
+      - la description et l'URL du produit depuis le conteneur data-cy="title-recipe" (avec fallback),
+      - le prix depuis le conteneur data-cy="price-recipe" (converti en FCFA),
+      - le rating depuis le span "a-icon-alt",
       - l'URL de l'image depuis l'élément <img class="s-image">,
-      - et la source fixe "Amazon".
+      - et la source "Amazon".
     """
     try:
-        # Description et URL du produit
+        description = "N/A"
+        product_url = "N/A"
         title_container = item.select_one("div[data-cy='title-recipe']")
         if title_container:
-            a_tag = title_container.find("a")
-            if a_tag:
-                description = a_tag.get_text(strip=True)
-                product_url = "https://amazon.com" + a_tag.get("href")
+            h2 = title_container.select_one("h2")
+            if h2:
+                description = h2.get_text(strip=True)
             else:
-                description, product_url = "N/A", "N/A"
-        else:
-            description, product_url = "N/A", "N/A"
+                a_tag = title_container.find("a")
+                if a_tag:
+                    description = a_tag.get_text(strip=True)
+            a_tag = title_container.find("a")
+            if a_tag and a_tag.has_attr("href"):
+                product_url = "https://amazon.com" + a_tag["href"]
+        if product_url == "N/A":
+            a_tag = item.find("a", href=re.compile("/dp/"))
+            if a_tag and a_tag.has_attr("href"):
+                product_url = "https://amazon.com" + a_tag["href"]
+            if description == "N/A":
+                alt_title = item.select_one("h2.a-size-base-plus")
+                if alt_title:
+                    description = alt_title.get_text(strip=True)
         
-        # Prix du produit
         price_container = item.select_one("div[data-cy='price-recipe'] span.a-offscreen")
         price = price_container.get_text(strip=True) if price_container else "N/A"
-        
-        # Note (rating)
+        price_fcfa = convert_price_to_fcfa(price)
+
         rating_container = item.select_one("span.a-icon-alt")
         rating = rating_container.get_text(strip=True) if rating_container else "No Rating"
-        
-        # Nombre d'avis (review count)
-        review_container = item.select_one("div[data-cy='reviews-block'] a.s-underline-text")
-        review_count = review_container.get_text(strip=True) if review_container else "0"
-        
-        # URL de l'image du produit
+
         image_container = item.find("img", class_="s-image")
         image_url = image_container.get("src") if image_container else "N/A"
-        
+
+        logging.info(f"✔ Produit extrait : {description} - {price} -> {price_fcfa}")
         return {
             "description": description,
-            "price": price,
+            "price": price_fcfa,
             "rating": rating,
-            "review_count": review_count,
-            "product_url": product_url,
-            "image_url": image_url,
+            "productURL": product_url,
+            "imageURL": image_url,
             "source": "Amazon"
         }
+    
     except Exception as e:
-        print(f"❌ Erreur lors de l'extraction d'un produit : {e}")
+        logging.error(f"❌ Erreur lors de l'extraction d'un produit : {e}")
         return None
 
-def scrape_amazon_page(search_term, page):
-    """Scrape une page spécifique de résultats Amazon."""
-    ua = UserAgent()
-    options = Options()
-    options.add_argument(f"user-agent={ua.random}")
-    options.add_argument("--headless")  # Mode sans affichage
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-dev-shm-usage")
-    
-    driver = uc.Chrome(options=options)
+def fetch_page(session, search_term, page, headers):
+    """Récupère et parse une page donnée pour un terme de recherche."""
     url = get_url(search_term, page)
-    print(f"🔍 Chargement de la page {page}: {url}")
-    driver.get(url)
-    
-    # Attente que le contenu principal soit chargé
+    logging.info(f"🌐 Récupération de la page {page} : {url}")
     try:
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div.s-main-slot"))
-        )
-    except TimeoutException:
-        print(f"⚠ Timeout sur la page {page}.")
-        driver.quit()
-        return []
-    
-    # Défilement pour forcer le chargement dynamique des éléments
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(2)
-    
-    # Analyse du code HTML avec BeautifulSoup
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    results = soup.find_all("div", {"data-component-type": "s-search-result"})
-    
-    # Extraction des informations pour chaque produit
-    page_records = []
-    for item in results:
-        record = scrape_records(item)
-        if record:
-            page_records.append(record)
-    
-    driver.quit()  # Fermeture du navigateur
-    print(f"✅ Page {page} : {len(page_records)} produits trouvés.")
-    return page_records
+        response = session.get(url, headers=headers)
+        if response.status_code == 200:
+            return page, BeautifulSoup(response.content, "html.parser")
+        else:
+            logging.error(f"❌ Erreur lors de la récupération de la page {page}, code HTTP : {response.status_code}")
+            return page, None
+    except Exception as e:
+        logging.error(f"❌ Exception lors de la récupération de la page {page} : {e}")
+        return page, None
 
-def scrape_amazon(search_term, max_pages=5):
-    """Scrape plusieurs pages en parallèle et retourne l'ensemble des résultats."""
-    all_records = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_pages) as executor:
-        futures = [
-            executor.submit(scrape_amazon_page, search_term, page)
-            for page in range(1, max_pages + 1)
-        ]
-        for future in concurrent.futures.as_completed(futures):
-            records = future.result()
-            all_records.extend(records)
-    return all_records
+def scrape_amazon(search_term):
+    """Scrape les résultats Amazon pour le terme de recherche donné pour 5 pages en parallèle."""
+    logging.info(f"🔍 Démarrage du scraping pour : {search_term}")
+    
+    ua = UserAgent()
+    headers = {
+        "User-Agent": ua.random,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
 
-@app.route("/search", methods=["GET"])
+    session = requests.Session()
+    records = []
+    pages_to_fetch = list(range(1, 6))  # Pages 1 à 5
+
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        future_to_page = {
+            executor.submit(fetch_page, session, search_term, page, headers): page
+            for page in pages_to_fetch
+        }
+        for future in as_completed(future_to_page):
+            page, soup = future.result()
+            if not soup:
+                logging.warning(f"⚠ Aucune donnée récupérée pour la page {page}.")
+                continue
+            logging.info(f"📄 Scraping de la page {page}...")
+            results = soup.find_all("div", {"data-component-type": "s-search-result"})
+            if not results:
+                logging.warning(f"⚠ Aucune donnée trouvée sur la page {page}.")
+                continue
+            for item in results:
+                record = scrape_records(item)
+                if record:
+                    records.append(record)
+            # Pause très courte pour limiter la charge (réduite pour plus de rapidité)
+            time.sleep(0.2)
+    
+    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source"])
+    
+    # Tri des résultats par prix décroissant
+    def parse_price(price_str):
+        try:
+            # Suppression du suffixe et des séparateurs
+            return float(price_str.replace(" FCFA", "").replace(",", ""))
+        except Exception:
+            return 0.0
+
+    if not df.empty:
+        df["price_numeric"] = df["price"].apply(parse_price)
+        df = df.sort_values(by="price_numeric", ascending=True).drop(columns=["price_numeric"])
+    
+    return df
+
+# Définition de l'endpoint Flask
+@app.route('/search', methods=['GET'])
 def search():
-    """API Flask pour récupérer les produits Amazon sous format JSON."""
     query = request.args.get("query")
     if not query:
         return jsonify({"error": "Veuillez fournir un mot-clé via le paramètre 'query'."}), 400
-
-    try:
-        max_pages = int(request.args.get("max_pages", 3))
-    except ValueError:
-        max_pages = 3
-
-    print(f"🔍 Recherche lancée : {query} sur {max_pages} pages.")
-    records = scrape_amazon(query, max_pages)
-    return jsonify(records)
+    df = scrape_amazon(query)
+    if df is not None and not df.empty:
+        records = df.to_dict(orient="records")
+        return jsonify(records)
+    else:
+        return jsonify({"error": "Aucune donnée extraite."}), 404
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
