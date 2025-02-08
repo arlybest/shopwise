@@ -1,0 +1,421 @@
+2025-02-08 17:00:09,679 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.22:5000
+2025-02-08 17:00:09,680 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 17:00:09,683 - INFO -  * Restarting with stat
+2025-02-08 17:00:10,698 - WARNING -  * Debugger is active!
+2025-02-08 17:00:10,719 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:00:21,097 - INFO - 🔍 Démarrage du scraping pour : vaisselle
+
+2025-02-08 17:00:21,249 - INFO - 🌐 Récupération de la page 1 : https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:00:21,249 - INFO - 🌐 Récupération de la page 2 : https://www.walmart.com/search?q=vaisselle
+&page=2
+2025-02-08 17:00:21,250 - INFO - 🌐 Récupération de la page 3 : https://www.walmart.com/search?q=vaisselle
+&page=3
+2025-02-08 17:00:21,251 - INFO - 🌐 Récupération de la page 4 : https://www.walmart.com/search?q=vaisselle
+&page=4
+2025-02-08 17:00:21,251 - INFO - 🌐 Récupération de la page 5 : https://www.walmart.com/search?q=vaisselle
+&page=5
+2025-02-08 17:00:33,640 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:00:33,644 - WARNING - ⚠ Aucune donnée trouvée sur la page 3.
+2025-02-08 17:00:34,111 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:00:34,113 - WARNING - ⚠ Aucune donnée trouvée sur la page 1.
+2025-02-08 17:00:34,252 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:00:34,256 - WARNING - ⚠ Aucune donnée trouvée sur la page 5.
+2025-02-08 17:00:35,187 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:00:35,190 - WARNING - ⚠ Aucune donnée trouvée sur la page 4.
+2025-02-08 17:00:37,624 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:00:37,626 - WARNING - ⚠ Aucune donnée trouvée sur la page 2.
+2025-02-08 17:00:37,650 - INFO - 127.0.0.1 - - [08/Feb/2025 17:00:37] "[33mGET /search?query=vaisselle%0A HTTP/1.1[0m" 404 -
+2025-02-08 17:03:53,201 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 17:03:53,432 - INFO -  * Restarting with stat
+2025-02-08 17:03:56,193 - WARNING -  * Debugger is active!
+2025-02-08 17:03:56,207 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:04:04,483 - INFO - Début du scraping Walmart pour: vaisselle
+, page 1
+2025-02-08 17:04:04,587 - INFO - Récupération de l'URL: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:04:10,668 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA
+2025-02-08 17:04:10,669 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA
+2025-02-08 17:04:11,035 - INFO - 127.0.0.1 - - [08/Feb/2025 17:04:11] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:06:41,158 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/amazon_scraper.py', reloading
+2025-02-08 17:06:41,499 - INFO -  * Restarting with stat
+2025-02-08 17:06:46,591 - WARNING -  * Debugger is active!
+2025-02-08 17:06:46,639 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:06:58,916 - INFO - Début du scraping Walmart pour: vaisselle
+, page 1
+2025-02-08 17:06:59,047 - INFO - Récupération de l'URL: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:07:05,692 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA
+2025-02-08 17:07:05,693 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA
+2025-02-08 17:07:05,713 - INFO - 127.0.0.1 - - [08/Feb/2025 17:07:05] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:25:50,019 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.22:5000
+2025-02-08 17:25:50,021 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 17:25:50,025 - INFO -  * Restarting with stat
+2025-02-08 17:25:51,037 - WARNING -  * Debugger is active!
+2025-02-08 17:25:51,066 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:25:57,546 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:25:57,662 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:25:57,662 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=vaisselle
+&page=2
+2025-02-08 17:25:57,663 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=vaisselle
+&page=3
+2025-02-08 17:25:57,663 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=vaisselle
+&page=4
+2025-02-08 17:25:57,664 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=vaisselle
+&page=5
+2025-02-08 17:26:18,421 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:26:18,429 - INFO - ✔ Produit extrait : Pot Handle Anti Scalding Cover Multi Functional Fryer Sleeve Silicon Handle Q9B4 - $6.65 -> 3,990.00 FCFA
+2025-02-08 17:26:18,430 - INFO - ✔ Produit extrait : Anti Freeze Ice CreamScoop Ice CreamScoop Polished Aluminium D4U8 - $6.15 -> 3,690.00 FCFA
+2025-02-08 17:26:24,952 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:26:24,955 - INFO - ✔ Produit extrait : 1*Reusable Basket Coffee Filter For 8-12 Cup Coffee AU V1O2 - $9.40 -> 5,640.00 FCFA
+2025-02-08 17:26:24,956 - INFO - ✔ Produit extrait : Steel Egg Shell Opener Topper Cutter Cracker Knocker K8C.ca Home Kitchen . 3W1L Y2Q9 - $1.19 -> 714.00 FCFA
+2025-02-08 17:26:25,578 - ERROR - ❌ Exception lors de la récupération de la page 2: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-08 17:26:25,580 - ERROR - ❌ Exception lors de la récupération de la page 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-08 17:26:25,585 - ERROR - ❌ Exception lors de la récupération de la page 1: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-08 17:26:25,588 - WARNING - ⚠ Aucune donnée récupérée pour la page 2.
+2025-02-08 17:26:25,589 - WARNING - ⚠ Aucune donnée récupérée pour la page 5.
+2025-02-08 17:26:25,589 - WARNING - ⚠ Aucune donnée récupérée pour la page 1.
+2025-02-08 17:26:25,613 - INFO - 127.0.0.1 - - [08/Feb/2025 17:26:25] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:28:22,183 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:28:22,501 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:28:22,502 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=vaisselle
+&page=2
+2025-02-08 17:28:22,503 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=vaisselle
+&page=3
+2025-02-08 17:28:22,504 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=vaisselle
+&page=4
+2025-02-08 17:28:22,508 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=vaisselle
+&page=5
+2025-02-08 17:28:33,508 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:28:33,512 - INFO - ✔ Produit extrait : Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA
+2025-02-08 17:28:33,512 - INFO - ✔ Produit extrait : Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA
+2025-02-08 17:28:33,717 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:28:33,719 - INFO - ✔ Produit extrait : XINYUAN Edelstahl Multifunktions-Gemse Schler & Julienne Schneider Kartoffel - $5.09 -> 3,054.00 FCFA
+2025-02-08 17:28:33,722 - INFO - ✔ Produit extrait : SHAPERME Steel Potato Peeler Carrot Grater Julienne Fruit Vegetable Cutter Tool4 - $10.37 -> 6,222.00 FCFA
+2025-02-08 17:28:33,927 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:28:33,932 - INFO - ✔ Produit extrait : 1*Reusable Basket Coffee Filter For 8-12 Cup Coffee AU V1O2 - $9.40 -> 5,640.00 FCFA
+2025-02-08 17:28:33,932 - INFO - ✔ Produit extrait : Steel Egg Shell Opener Topper Cutter Cracker Knocker K8C.ca Home Kitchen . 3W1L Y2Q9 - $1.19 -> 714.00 FCFA
+2025-02-08 17:28:42,798 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:28:42,802 - INFO - ✔ Produit extrait : Pot Handle Anti Scalding Cover Multi Functional Fryer Sleeve Silicon Handle Q9B4 - $6.65 -> 3,990.00 FCFA
+2025-02-08 17:28:42,804 - INFO - ✔ Produit extrait : Anti Freeze Ice CreamScoop Ice CreamScoop Polished Aluminium D4U8 - $6.15 -> 3,690.00 FCFA
+2025-02-08 17:28:45,359 - ERROR - ❌ Exception lors de la récupération de la page 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-02-08 17:28:45,360 - WARNING - ⚠ Aucune donnée récupérée pour la page 5.
+2025-02-08 17:28:45,379 - INFO - 127.0.0.1 - - [08/Feb/2025 17:28:45] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:33:01,847 - INFO - 🔍 Début du scraping Walmart pour: voiture
+2025-02-08 17:33:01,959 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=voiture&page=1
+2025-02-08 17:33:01,960 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=voiture&page=2
+2025-02-08 17:33:01,961 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=voiture&page=3
+2025-02-08 17:33:01,961 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=voiture&page=4
+2025-02-08 17:33:01,962 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=voiture&page=5
+2025-02-08 17:33:05,191 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:33:05,194 - INFO - ✔ Produit extrait : Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Purple - $30.02 -> 18,012.00 FCFA
+2025-02-08 17:33:05,195 - INFO - ✔ Produit extrait : Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:33:05,672 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:33:05,675 - INFO - ✔ Produit extrait : Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:33:05,676 - INFO - ✔ Produit extrait : Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:33:05,891 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:33:05,905 - INFO - ✔ Produit extrait : Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:33:05,912 - INFO - ✔ Produit extrait : Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:33:06,117 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:33:06,130 - INFO - ✔ Produit extrait : Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:33:06,131 - INFO - ✔ Produit extrait : Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:33:06,336 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:33:06,341 - INFO - ✔ Produit extrait : Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:33:06,343 - INFO - ✔ Produit extrait : Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:33:06,586 - INFO - 192.168.100.27 - - [08/Feb/2025 17:33:06] "GET /search?query=voiture HTTP/1.1" 200 -
+2025-02-08 17:36:15,768 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 17:36:16,579 - INFO -  * Restarting with stat
+2025-02-08 17:36:20,641 - WARNING -  * Debugger is active!
+2025-02-08 17:36:20,678 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:36:20,717 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:36:20,974 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:36:20,976 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=vaisselle
+&page=2
+2025-02-08 17:36:20,979 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=vaisselle
+&page=3
+2025-02-08 17:36:20,984 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=vaisselle
+&page=4
+2025-02-08 17:36:20,999 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=vaisselle
+&page=5
+2025-02-08 17:36:26,145 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:36:26,163 - INFO - Produit extrait: Big sale! Silicone Straw Brushes,Extra Long StrawCleaning Brush PipeCleaners Brush W1I0 - $2.97 -> 1,782.00 FCFA
+2025-02-08 17:36:26,164 - INFO - Produit extrait: CTDWNT 4/6/8 inch Silicone Round Cake Pan Tins Non-stick Baking Mould Bakeware L7H3 - N/A -> N/A
+2025-02-08 17:36:26,369 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:36:26,371 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA
+2025-02-08 17:36:26,372 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA
+2025-02-08 17:36:26,573 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:36:26,576 - INFO - Produit extrait: 1pc Stainless Steel Thickened Square Head Plain Spoon Sweet Spoon Z9X6 - $2.99 -> 1,794.00 FCFA
+2025-02-08 17:36:26,577 - INFO - Produit extrait: DTREELS Thick Stainless Steel Sweet Spoon with Square Head Design Single Piece Hot Q2 B4H4 - $5.97 -> 3,582.00 FCFA
+2025-02-08 17:36:26,783 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:36:26,786 - INFO - Produit extrait: 1*Reusable Basket Coffee Filter For 8-12 Cup Coffee AU V1O2 - $2.26 -> 1,356.00 FCFA
+2025-02-08 17:36:26,787 - INFO - Produit extrait: Steel Egg Shell Opener Topper Cutter Cracker Knocker K8C.ca Home Kitchen . 3W1L Y2Q9 - $8.97 -> 5,382.00 FCFA
+2025-02-08 17:36:26,992 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:36:26,995 - INFO - Produit extrait: XINYUAN Edelstahl Multifunktions-Gemse Schler & Julienne Schneider Kartoffel - $4.26 -> 2,556.00 FCFA
+2025-02-08 17:36:26,996 - INFO - Produit extrait: SHAPERME Steel Potato Peeler Carrot Grater Julienne Fruit Vegetable Cutter Tool4 - $0.26 -> 156.00 FCFA
+2025-02-08 17:36:27,225 - INFO - 127.0.0.1 - - [08/Feb/2025 17:36:27] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:40:26,982 - INFO - 🔍 Début du scraping Walmart pour: voiture
+2025-02-08 17:40:27,261 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=voiture&page=1
+2025-02-08 17:40:27,262 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=voiture&page=2
+2025-02-08 17:40:27,262 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=voiture&page=3
+2025-02-08 17:40:27,263 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=voiture&page=4
+2025-02-08 17:40:27,265 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=voiture&page=5
+2025-02-08 17:40:32,666 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:40:32,677 - INFO - Produit extrait: Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:40:32,678 - INFO - Produit extrait: Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:40:32,884 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:40:32,897 - INFO - Produit extrait: Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:40:32,899 - INFO - Produit extrait: Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:40:33,103 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:40:33,107 - INFO - Produit extrait: Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:40:33,108 - INFO - Produit extrait: Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:40:33,309 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:40:33,313 - INFO - Produit extrait: Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:40:33,314 - INFO - Produit extrait: Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:40:35,034 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:40:35,037 - INFO - Produit extrait: Autoking Cover Universal Mesh Car Seat Cover Set Voiture Accessories Interior Unisex Fit Most Car SUV Track Van With Zipper Airbag Compatible Pink - $27.01 -> 16,206.00 FCFA
+2025-02-08 17:40:35,038 - INFO - Produit extrait: Naisfei 8 Pcs Clear Car Door Handle Protector,Car Door Handle Protector Bowl Sticker,Scratch-Proof Door Handles Paint Protection Film, Car Voiture Accessories for Women Men - $7.29 -> 4,374.00 FCFA
+2025-02-08 17:40:35,311 - INFO - 192.168.100.27 - - [08/Feb/2025 17:40:35] "GET /search?query=voiture HTTP/1.1" 200 -
+2025-02-08 17:43:23,360 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 17:43:24,028 - INFO -  * Restarting with stat
+2025-02-08 17:43:27,448 - WARNING -  * Debugger is active!
+2025-02-08 17:43:27,488 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:43:27,520 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:43:27,638 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:43:32,028 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA - Rating: 3.9
+2025-02-08 17:43:32,032 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA - Rating: No Rating
+2025-02-08 17:43:32,033 - INFO - Nombre total de pages détectées: 1
+2025-02-08 17:43:32,070 - INFO - 127.0.0.1 - - [08/Feb/2025 17:43:32] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:44:21,315 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:44:21,424 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:44:26,345 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA - Rating: 3.9
+2025-02-08 17:44:26,346 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA - Rating: No Rating
+2025-02-08 17:44:26,347 - INFO - Nombre total de pages détectées: 1
+2025-02-08 17:44:26,387 - INFO - 127.0.0.1 - - [08/Feb/2025 17:44:26] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:46:34,521 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 17:46:34,824 - INFO -  * Restarting with stat
+2025-02-08 17:46:37,468 - WARNING -  * Debugger is active!
+2025-02-08 17:46:37,490 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:46:37,519 - INFO - 🔍 Début du scraping Walmart pour: vaisselle
+
+2025-02-08 17:46:37,635 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=vaisselle
+&page=1
+2025-02-08 17:46:37,635 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=vaisselle
+&page=2
+2025-02-08 17:46:37,636 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=vaisselle
+&page=3
+2025-02-08 17:46:37,637 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=vaisselle
+&page=4
+2025-02-08 17:46:37,639 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=vaisselle
+&page=5
+2025-02-08 17:46:40,488 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:46:40,491 - INFO - Produit extrait: Vaseline Original Healing Jelly, 1.75 Oz., Pack of 1 - $6.37 -> 3,822.00 FCFA - Rating: 3.9
+2025-02-08 17:46:40,492 - INFO - Produit extrait: Simulé Cuisine Lave-vaisselle Jouet Enfants - $8.99 -> 5,394.00 FCFA - Rating: No Rating
+2025-02-08 17:46:40,696 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:46:40,698 - INFO - Produit extrait: Pot Handle Anti Scalding Cover Multi Functional Fryer Sleeve Silicon Handle Q9B4 - $1.47 -> 882.00 FCFA - Rating: No Rating
+2025-02-08 17:46:40,699 - INFO - Produit extrait: Anti Freeze Ice CreamScoop Ice CreamScoop Polished Aluminium D4U8 - $6.15 -> 3,690.00 FCFA - Rating: No Rating
+2025-02-08 17:46:41,986 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:46:41,988 - INFO - Produit extrait: 1*Reusable Basket Coffee Filter For 8-12 Cup Coffee AU V1O2 - $9.40 -> 5,640.00 FCFA - Rating: No Rating
+2025-02-08 17:46:41,989 - INFO - Produit extrait: Steel Egg Shell Opener Topper Cutter Cracker Knocker K8C.ca Home Kitchen . 3W1L Y2Q9 - $1.19 -> 714.00 FCFA - Rating: No Rating
+2025-02-08 17:46:42,887 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:46:42,889 - INFO - Produit extrait: 1pc Stainless Steel Thickened Square Head Plain Spoon Sweet Spoon Z9X6 - $10.29 -> 6,174.00 FCFA - Rating: No Rating
+2025-02-08 17:46:42,890 - INFO - Produit extrait: DTREELS Thick Stainless Steel Sweet Spoon with Square Head Design Single Piece Hot Q2 B4H4 - $4.75 -> 2,850.00 FCFA - Rating: No Rating
+2025-02-08 17:46:43,578 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:46:43,579 - INFO - Produit extrait: XINYUAN Edelstahl Multifunktions-Gemse Schler & Julienne Schneider Kartoffel - $5.09 -> 3,054.00 FCFA - Rating: No Rating
+2025-02-08 17:46:43,580 - INFO - Produit extrait: SHAPERME Steel Potato Peeler Carrot Grater Julienne Fruit Vegetable Cutter Tool4 - $10.37 -> 6,222.00 FCFA - Rating: No Rating
+2025-02-08 17:46:43,806 - INFO - 127.0.0.1 - - [08/Feb/2025 17:46:43] "GET /search?query=vaisselle%0A HTTP/1.1" 200 -
+2025-02-08 17:49:29,533 - INFO - 🔍 Début du scraping Walmart pour: telephone
+2025-02-08 17:49:29,851 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=telephone&page=1
+2025-02-08 17:49:29,855 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=telephone&page=2
+2025-02-08 17:49:29,856 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=telephone&page=3
+2025-02-08 17:49:29,857 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=telephone&page=4
+2025-02-08 17:49:29,875 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=telephone&page=5
+2025-02-08 17:49:34,052 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:49:34,057 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,057 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,058 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,060 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:49:34,061 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:49:34,062 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:49:34,062 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,063 - INFO - Produit extrait: Ooma Phone Genie VoIP Internet Home Phone Service - $30.68 -> 18,408.00 FCFA - Rating: 3.9
+2025-02-08 17:49:34,064 - INFO - Produit extrait: VTech VS112-3 DECT 6.0 Bluetooth 3 Handset Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID, Silver & Black, New - $79.99 -> 47,994.00 FCFA - Rating: 4.6
+2025-02-08 17:49:34,064 - INFO - Produit extrait: Med-Pat D800C- Single Line Analog Deskset Telephone with Super Bright Ring Light Indicator, Easy-to-Use Dial Pad, Advanced Audio Quality, Wall Mountable Landline Phone for Home & Office- Cream - $34.98 -> 20,988.00 FCFA - Rating: 5
+2025-02-08 17:49:34,065 - INFO - Produit extrait: AT&T ML17939 2-Line Corded Phone with Speakerphone & Digital Answering System, Black - $75.20 -> 45,120.00 FCFA - Rating: 4.6
+2025-02-08 17:49:34,068 - INFO - Produit extrait: Corded Telephone, Desktop Landline Phone Multifunction  For Hotel For Office For Home - $22.53 -> 13,518.00 FCFA - Rating: 3.6
+2025-02-08 17:49:34,069 - INFO - Produit extrait: VTech CS6529-4B 4-Handset DECT 6.0 Cordless Phone with Answering System and Caller ID - $114.73 -> 68,838.00 FCFA - Rating: 4
+2025-02-08 17:49:34,069 - INFO - Produit extrait: AT&T CL84115 DECT 6.0 Expandable Cordless Phone with Answering System and Caller ID, Silver/Black with 1 Handset - $80.20 -> 48,120.00 FCFA - Rating: 3.8
+2025-02-08 17:49:34,481 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:49:34,483 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,484 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,484 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:49:34,485 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,486 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:49:34,488 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:49:34,490 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,493 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:49:34,494 - INFO - Produit extrait: VTech CD1103WH Corded Phone with Redial Button, White - $10.88 -> 6,528.00 FCFA - Rating: 4
+2025-02-08 17:49:34,495 - INFO - Produit extrait: Vtech CS6114 1 Handset Cordless Phone- Caller ID, White - $16.88 -> 10,128.00 FCFA - Rating: 4.1
+2025-02-08 17:49:34,495 - INFO - Produit extrait: VTech CS6919-2 DECT 6.0 Cordless Phone with Caller ID and Handset Speakerphone, 2 Handsets, Silver/Black - $34.00 -> 20,400.00 FCFA - Rating: 4.3
+2025-02-08 17:49:34,496 - INFO - Produit extrait: VTech DECT 6.0 Expandable Cordless Phone with Call Block, CS6919 (Silver & Black) - $19.98 -> 11,988.00 FCFA - Rating: 4.3
+2025-02-08 17:49:34,496 - INFO - Produit extrait: VTech CD1153 Corded Speakerphone with Caller ID - $27.38 -> 16,428.00 FCFA - Rating: 3.9
+2025-02-08 17:49:34,879 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:49:34,882 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,882 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,883 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:49:34,883 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:49:34,884 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:49:34,884 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:49:34,887 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:34,888 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:49:34,891 - INFO - Produit extrait: AT&T Corded Trimline Phone with Caller ID (White) - $26.18 -> 15,708.00 FCFA - Rating: 3.8
+2025-02-08 17:49:34,894 - INFO - Produit extrait: Cordless Telephone in black - $34.99 -> 20,994.00 FCFA - Rating: 4.3
+2025-02-08 17:49:34,894 - INFO - Produit extrait: VTech Wall Mount 2 Handsets Cordless Phone with Call Waiting, Silver, 2 Count - $59.99 -> 35,994.00 FCFA - Rating: 3.9
+2025-02-08 17:49:34,895 - INFO - Produit extrait: Med-Pat T4-R Full-Featured Trimline Telephone with Super Bright Ring Light Indicator - Clear Ear Sound w/Full Range Volume Control, Ideal for Hotel, Business & Landline Home Use- Red, New 1 Count - $39.99 -> 23,994.00 FCFA - Rating: 4.5
+2025-02-08 17:49:34,895 - INFO - Produit extrait: VTech CD1113 Black Trimstyle Phone with Caller ID - N/A -> N/A - Rating: 3.4
+2025-02-08 17:49:34,896 - INFO - Produit extrait: Med-Pat XL3060 Featured-Packed Phone for Enhanced Communication w/Visual Ring Light Indicator, Patented Volume Boost Offers Extra Loud/Extra Clear Communication, for Landline Use- Contemporary Color - $22.98 -> 13,788.00 FCFA - Rating: 5
+2025-02-08 17:49:35,291 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:49:35,294 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:49:35,294 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:35,295 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:49:35,295 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:49:35,296 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,301 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:49:35,306 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:35,307 - INFO - Produit extrait: Ooma Phone Genie VoIP Internet Home Phone Service - $30.68 -> 18,408.00 FCFA - Rating: 3.9
+2025-02-08 17:49:35,308 - INFO - Produit extrait: RENNY JR - The Loud Cell Phone Ringer, Amplifier & Flasher for The Hearing Impaired (117dB) | Auto-Connects Wirelessly via Bluetooth | External Ringtones | Text/Email Notifications - $69.95 -> 41,970.00 FCFA - Rating: 5
+2025-02-08 17:49:35,309 - INFO - Produit extrait: AT&T EL52103 DECT 6.0 Cordless Answering System with Caller ID & Call Waiting - $45.56 -> 27,336.00 FCFA - Rating: 4.2
+2025-02-08 17:49:35,309 - INFO - Produit extrait: GE5303 Trimline Standard Phone - $32.98 -> 19,788.00 FCFA - Rating: 4.2
+2025-02-08 17:49:35,310 - INFO - Produit extrait: Avery Flexible Name Tags, 2-1/3" x 3-3/8", White, 160 (8395) - $14.41 -> 8,646.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,311 - INFO - Produit extrait: AT&T CL82407 DECT 6.0 Expandable Answering System with Smart Call Blocker, Silver/Black with 4 Handsets - N/A -> N/A - Rating: 4.2
+2025-02-08 17:49:35,312 - INFO - Produit extrait: Panasonic KX-TGE432B DECT 6.0 Plus Expandable Cordless Phone System with Answering Machine and 2 Handsets - $89.55 -> 53,730.00 FCFA - Rating: 4.1
+2025-02-08 17:49:35,536 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:49:35,539 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:35,540 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:49:35,541 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:49:35,542 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:49:35,543 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,545 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:49:35,547 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:49:35,548 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:49:35,549 - INFO - Produit extrait: RadioShack Corded Black Phone with Display, Landline Phone for Office or Home Offers Pre-Dial, Re-Dial, and Edit Functions for Seamless Call Management - $23.99 -> 14,394.00 FCFA - Rating: 3.7
+2025-02-08 17:49:35,550 - INFO - Produit extrait: AT&T 2-Handset Expandable Cordless Phone with Unsurpassed Range, Bluetooth Connect to Cell, Smart Call Blocker and Answering System, DLP72212 (Black) - $58.00 -> 34,800.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,551 - INFO - Produit extrait: Panasonic Expandable Cordless 2 Phone Answering System w/ Comfort Shoulder Grip - $69.99 -> 41,994.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,552 - INFO - Produit extrait: Vtech SN5307 Amplified Photo Dial Accessory Handset - $34.95 -> 20,970.00 FCFA - Rating: 4.1
+2025-02-08 17:49:35,553 - INFO - Produit extrait: Panasonic DECT 6.0 2-Handset Cordless Phone with Call Block and Answering System - $54.97 -> 32,982.00 FCFA - Rating: 4.1
+2025-02-08 17:49:35,554 - INFO - Produit extrait: Vtech CS6619 Cordless Phone System - $19.98 -> 11,988.00 FCFA - Rating: 4.4
+2025-02-08 17:49:35,777 - INFO - 192.168.100.27 - - [08/Feb/2025 17:49:35] "GET /search?query=telephone HTTP/1.1" 200 -
+2025-02-08 17:50:07,670 - INFO - 🔍 Début du scraping Walmart pour: telephone
+
+2025-02-08 17:50:07,842 - INFO - 🌐 Récupération de la page 1: https://www.walmart.com/search?q=telephone
+&page=1
+2025-02-08 17:50:07,843 - INFO - 🌐 Récupération de la page 2: https://www.walmart.com/search?q=telephone
+&page=2
+2025-02-08 17:50:07,844 - INFO - 🌐 Récupération de la page 3: https://www.walmart.com/search?q=telephone
+&page=3
+2025-02-08 17:50:07,845 - INFO - 🌐 Récupération de la page 4: https://www.walmart.com/search?q=telephone
+&page=4
+2025-02-08 17:50:07,845 - INFO - 🌐 Récupération de la page 5: https://www.walmart.com/search?q=telephone
+&page=5
+2025-02-08 17:50:24,292 - INFO - 📄 Scraping de la page 3...
+2025-02-08 17:50:24,294 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:24,295 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:50:24,296 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:50:24,296 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:50:24,299 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:50:24,299 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:50:24,300 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:24,302 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:50:24,307 - INFO - Produit extrait: VTech VS112-3 DECT 6.0 Bluetooth 3 Handset Cordless Phone for Home with Answering Machine, Call Blocking, Caller ID, Silver & Black, New - $79.99 -> 47,994.00 FCFA - Rating: 4.6
+2025-02-08 17:50:24,308 - INFO - Produit extrait: Med-Pat D800C- Single Line Analog Deskset Telephone with Super Bright Ring Light Indicator, Easy-to-Use Dial Pad, Advanced Audio Quality, Wall Mountable Landline Phone for Home & Office- Cream - $34.98 -> 20,988.00 FCFA - Rating: 5
+2025-02-08 17:50:24,309 - INFO - Produit extrait: AT&T ML17939 2-Line Corded Phone with Speakerphone & Digital Answering System, Black - $75.20 -> 45,120.00 FCFA - Rating: 4.6
+2025-02-08 17:50:24,310 - INFO - Produit extrait: Corded Telephone, Desktop Landline Phone Multifunction  For Hotel For Office For Home - $22.53 -> 13,518.00 FCFA - Rating: 3.6
+2025-02-08 17:50:24,311 - INFO - Produit extrait: VTech CS6529-4B 4-Handset DECT 6.0 Cordless Phone with Answering System and Caller ID - $114.73 -> 68,838.00 FCFA - Rating: 4
+2025-02-08 17:50:24,314 - INFO - Produit extrait: AT&T CL84115 DECT 6.0 Expandable Cordless Phone with Answering System and Caller ID, Silver/Black with 1 Handset - $80.20 -> 48,120.00 FCFA - Rating: 3.8
+2025-02-08 17:50:30,633 - INFO - 📄 Scraping de la page 2...
+2025-02-08 17:50:30,635 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:30,636 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:50:30,636 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:50:30,637 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:50:30,638 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:50:30,641 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:50:30,642 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:30,643 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:50:30,644 - INFO - Produit extrait: RadioShack Corded Black Phone with Display, Landline Phone for Office or Home Offers Pre-Dial, Re-Dial, and Edit Functions for Seamless Call Management - $23.99 -> 14,394.00 FCFA - Rating: 3.7
+2025-02-08 17:50:30,644 - INFO - Produit extrait: AT&T 2-Handset Expandable Cordless Phone with Unsurpassed Range, Bluetooth Connect to Cell, Smart Call Blocker and Answering System, DLP72212 (Black) - $58.00 -> 34,800.00 FCFA - Rating: 4.4
+2025-02-08 17:50:30,646 - INFO - Produit extrait: Panasonic Expandable Cordless 2 Phone Answering System w/ Comfort Shoulder Grip - $69.99 -> 41,994.00 FCFA - Rating: 4.4
+2025-02-08 17:50:30,649 - INFO - Produit extrait: Vtech SN5307 Amplified Photo Dial Accessory Handset - $34.95 -> 20,970.00 FCFA - Rating: 4.1
+2025-02-08 17:50:30,650 - INFO - Produit extrait: Panasonic DECT 6.0 2-Handset Cordless Phone with Call Block and Answering System - $54.97 -> 32,982.00 FCFA - Rating: 4.1
+2025-02-08 17:50:30,650 - INFO - Produit extrait: Vtech CS6619 Cordless Phone System - $19.98 -> 11,988.00 FCFA - Rating: 4.4
+2025-02-08 17:50:30,997 - INFO - 📄 Scraping de la page 4...
+2025-02-08 17:50:31,002 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:50:31,003 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:31,006 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:50:31,007 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:50:31,010 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:50:31,013 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:50:31,014 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:31,018 - INFO - Produit extrait: Hamilton CapTel 840i Closed Captioned Telephone - $75.00 -> 45,000.00 FCFA - Rating: 4.5
+2025-02-08 17:50:31,019 - INFO - Produit extrait: AT&T Corded Trimline Phone with Caller ID (White) - $26.18 -> 15,708.00 FCFA - Rating: 3.8
+2025-02-08 17:50:31,021 - INFO - Produit extrait: VTech Wall Mount 2 Handsets Cordless Phone with Call Waiting, Silver, 2 Count - $59.99 -> 35,994.00 FCFA - Rating: 3.9
+2025-02-08 17:50:31,022 - INFO - Produit extrait: Med-Pat T4-R Full-Featured Trimline Telephone with Super Bright Ring Light Indicator - Clear Ear Sound w/Full Range Volume Control, Ideal for Hotel, Business & Landline Home Use- Red, New 1 Count - $39.99 -> 23,994.00 FCFA - Rating: 4.5
+2025-02-08 17:50:31,024 - INFO - Produit extrait: VTech CD1113 Black Trimstyle Phone with Caller ID - N/A -> N/A - Rating: 3.4
+2025-02-08 17:50:31,024 - INFO - Produit extrait: Med-Pat XL3060 Featured-Packed Phone for Enhanced Communication w/Visual Ring Light Indicator, Patented Volume Boost Offers Extra Loud/Extra Clear Communication, for Landline Use- Contemporary Color - $22.98 -> 13,788.00 FCFA - Rating: 5
+2025-02-08 17:50:31,025 - INFO - Produit extrait: AT&T GL2101-2 DECT 6.0 2-Handset Cordless Home Phone with Call Block, Caller ID, Full-Duplex Handset Speakerphone, 2" White Backlit Display, Lighted Keypad (Graphite & Black) - $54.16 -> 32,496.00 FCFA - Rating: 3
+2025-02-08 17:50:34,954 - INFO - 📄 Scraping de la page 5...
+2025-02-08 17:50:34,958 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:34,958 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:50:34,959 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:50:34,960 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:50:34,961 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:50:34,962 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:50:34,963 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:34,963 - INFO - Produit extrait: Ryan Bros. American Retro 1950's Payphone with Coin Bank Wall-Mount Corded Phone (Pink) - $109.88 -> 65,928.00 FCFA - Rating: 5
+2025-02-08 17:50:34,964 - INFO - Produit extrait: Clarity DECT 6.0 Wall Mount 3 Handsets Cordless Phone with Call Waiting, Red & White, 3 Count - $299.89 -> 179,934.00 FCFA - Rating: 4.3
+2025-02-08 17:50:34,965 - INFO - Produit extrait: AT&T CL4940 Corded Standard Phone with Answering System and Backlit Display, White - $29.52 -> 17,712.00 FCFA - Rating: No Rating
+2025-02-08 17:50:34,968 - INFO - Produit extrait: VTech CS6629 DECT 6.0 Cordless Phone - Silver - 1 x Phone Line - Speakerphone - Answering Machine - Hearing Aid Compatible - Backlight - $42.41 -> 25,446.00 FCFA - Rating: 4.6
+2025-02-08 17:50:34,969 - INFO - Produit extrait: AT&T ATCRL30102 Additional Handset For Crl32102 - $39.98 -> 23,988.00 FCFA - Rating: 4.2
+2025-02-08 17:50:34,969 - INFO - Produit extrait: Yealink W73P IP DECT Phone Bundle W73H with W70 Base - $79.00 -> 47,400.00 FCFA - Rating: No Rating
+2025-02-08 17:50:34,970 - INFO - Produit extrait: AT&T CL80111 DECT 6.0 Cordless Accessory Handset Phone, Black/Silver, 1 Accessory Handset - $35.39 -> 21,234.00 FCFA - Rating: 4.4
+2025-02-08 17:50:37,823 - INFO - 📄 Scraping de la page 1...
+2025-02-08 17:50:37,825 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:37,826 - INFO - Produit extrait: Med-Pat XL88WP- Easy to Use One Piece Telephone with Visual Ring Light Indicator, Ultrasonically Sealed Water Resistant Landline Phone- Full Range Volume Control with High Visibility Keypad- White - $32.98 -> 19,788.00 FCFA - Rating: No Rating
+2025-02-08 17:50:37,826 - INFO - Produit extrait: Med-Pat T-4 Full-Featured Trimline Telephone w/Ring/in-Use Light Indicator - Corded Wall Phone w/Full Range Volume Control, Hearing Aid Compatible, Ideal for Hotel, Business & Landline Use- Cream - $27.99 -> 16,794.00 FCFA - Rating: 4.5
+2025-02-08 17:50:37,827 - INFO - Produit extrait: FIRST by TAFEA Emergency Auto Dialer, Med-Pat Wall Mount Corded Phone with Speakerphone, Phone, and User Manual - $44.99 -> 26,994.00 FCFA - Rating: No Rating
+2025-02-08 17:50:37,831 - INFO - Produit extrait: Panasonic 3-Handset Expandable Cordless Phone System with Answering System - KX-TG3833M - $79.00 -> 47,400.00 FCFA - Rating: 4.4
+2025-02-08 17:50:37,832 - INFO - Produit extrait: Panasonic Cordless Phone with Digital Answering Machine, Advanced Call Block, 4 Handsets- KX-TG3824S - $99.00 -> 59,400.00 FCFA - Rating: 4.6
+2025-02-08 17:50:37,832 - INFO - Produit extrait: Med-Pat T1C Sleek Trimline Corded Telephone with Ring/In-Use Light Indicator- Wall-Mountable Analog Retro House Phone, Hearing Aid Compatible- Landline Phone for Home, Business and Office- Dove Grey - $23.98 -> 14,388.00 FCFA - Rating: 4.7
+2025-02-08 17:50:37,833 - INFO - Produit extrait: Hamilton CapTel 840i Closed Captioned Telephone - $75.00 -> 45,000.00 FCFA - Rating: 4.5
+2025-02-08 17:50:37,833 - INFO - Produit extrait: VTech CD1103WH Corded Phone with Redial Button, White - $10.88 -> 6,528.00 FCFA - Rating: 4
+2025-02-08 17:50:37,834 - INFO - Produit extrait: Vtech CS6114 1 Handset Cordless Phone- Caller ID, White - $16.88 -> 10,128.00 FCFA - Rating: 4.1
+2025-02-08 17:50:37,844 - INFO - Produit extrait: VTech CS6919-2 DECT 6.0 Cordless Phone with Caller ID and Handset Speakerphone, 2 Handsets, Silver/Black - $34.00 -> 20,400.00 FCFA - Rating: 4.3
+2025-02-08 17:50:37,844 - INFO - Produit extrait: VTech DECT 6.0 Expandable Cordless Phone with Call Block, CS6919 (Silver & Black) - $19.98 -> 11,988.00 FCFA - Rating: 4.3
+2025-02-08 17:50:37,845 - INFO - Produit extrait: VTech CD1153 Corded Speakerphone with Caller ID - $27.38 -> 16,428.00 FCFA - Rating: 3.9
+2025-02-08 17:50:38,092 - INFO - 127.0.0.1 - - [08/Feb/2025 17:50:38] "GET /search?query=telephone%0A HTTP/1.1" 200 -
+2025-02-08 17:53:23,018 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/walmart_scraper.py', reloading
+2025-02-08 17:53:23,405 - INFO -  * Restarting with stat
+2025-02-08 17:53:27,601 - WARNING -  * Debugger is active!
+2025-02-08 17:53:27,628 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:53:32,808 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/amazon_scraper.py', reloading
+2025-02-08 17:53:33,070 - INFO -  * Restarting with stat
+2025-02-08 17:53:35,594 - WARNING -  * Debugger is active!
+2025-02-08 17:53:35,615 - INFO -  * Debugger PIN: 101-044-318
+2025-02-08 17:53:53,098 - INFO -  * Detected change in '/Users/roniktakougang/Documents/shopwise/scrapers/glotehlo_scraper.py', reloading
+2025-02-08 17:53:53,330 - INFO -  * Restarting with stat
+2025-02-08 17:53:56,257 - WARNING -  * Debugger is active!
+2025-02-08 17:53:56,280 - INFO -  * Debugger PIN: 101-044-318

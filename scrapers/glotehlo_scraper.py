@@ -69,7 +69,9 @@ def scrape_glotelho(search_term, max_pages=3):
                         "old_price": old_price,
                         "productURL": product_url,
                         "imageURL": image_url,
-                        "source": "https://glotelho.cm/images/glotelho-ecommerce.jpg"
+                        "sourceLogo": "https://glotelho.cm/images/glotelho-ecommerce.jpg",
+                        "source":"Glotehlo"
+
                     })
             except Exception as e:
                 logging.error(f"Erreur d'extraction : {e}")

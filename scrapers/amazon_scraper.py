@@ -125,7 +125,8 @@ def scrape_records(item):
             "rating": rating,
             "productURL": product_url,
             "imageURL": image_url,
-            "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+            "sourceLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+            "source":"Amazon"
         }
     
     except Exception as e:
@@ -187,7 +188,7 @@ def scrape_amazon(search_term):
             # Pause très courte pour limiter la charge (réduite pour plus de rapidité)
             time.sleep(0.2)
     
-    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source"])
+    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source","sourceLogo"])
     
     # Tri des résultats par prix décroissant
     def parse_price(price_str):

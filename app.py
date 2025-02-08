@@ -2,10 +2,12 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
+import math
 
 # Importation des fonctions de scraping depuis vos modules
 from scrapers.amazon_scraper import scrape_amazon
 from scrapers.glotehlo_scraper import scrape_glotelho
+from scrapers.walmart_scraper import scrape_walmart
 
 app = Flask(__name__)
 CORS(app)  # Autorise les requêtes CORS
@@ -46,39 +48,56 @@ def compute_deal_attributes(record):
 @app.route('/search', methods=['GET'])
 def search():
     """
-    Endpoint qui reçoit un paramètre 'query', lance en parallèle les scrapers sur Amazon et Glotehlo,
-    combine les résultats, filtre les offres dont le prix est invalide, calcule le prix numérique,
-    formate les prix de manière cohérente, puis trie les offres par prix croissant (les moins chers en premier).
+    Endpoint qui reçoit un paramètre 'query', lance en parallèle les scrapers sur Amazon, Glotehlo et Walmart,
+    combine les résultats, filtre les offres dont le prix est invalide (0, NaN ou infini),
+    déduplique les offres basées sur l'URL du produit,
+    calcule le prix numérique, formate les prix de manière cohérente,
+    puis trie les offres par prix croissant (les moins chers en premier).
     """
     query = request.args.get("query")
     if not query:
         return jsonify({"error": "Veuillez fournir un mot-clé via le paramètre 'query'."}), 400
     
     try:
-        # Exécuter les deux scrapers en parallèle
-        with ThreadPoolExecutor(max_workers=2) as executor:
+        # Exécuter les trois scrapers en parallèle
+        with ThreadPoolExecutor(max_workers=3) as executor:
             future_amazon = executor.submit(scrape_amazon, query)
             future_glotehlo = executor.submit(scrape_glotelho, query)
+            future_walmart = executor.submit(scrape_walmart, query)
             amazon_df = future_amazon.result()
             glotehlo_records = future_glotehlo.result()
+            walmart_df = future_walmart.result()
             
-        # Conversion du DataFrame Amazon en liste de dictionnaires
+        # Conversion du DataFrame Amazon et Walmart en liste de dictionnaires
         if amazon_df is not None and not amazon_df.empty:
             amazon_records = amazon_df.to_dict(orient="records")
         else:
             amazon_records = []
         
-        # Combinaison des résultats des deux sites
-        combined_results = amazon_records + glotehlo_records
+        if walmart_df is not None and not walmart_df.empty:
+            walmart_records = walmart_df.to_dict(orient="records")
+        else:
+            walmart_records = []
         
-        # Filtrer les offres dont le prix est manquant ou invalide et calculer les attributs
+        # Combiner les résultats des trois sites
+        combined_results = amazon_records + glotehlo_records + walmart_records
+        
+        # Filtrer les offres dont le prix est manquant ou invalide et dédupliquer par URL
         filtered_results = []
+        seen_urls = set()
         for record in combined_results:
             if "price" not in record or not record["price"] or record["price"] == "N/A":
                 continue
             numeric_price = extract_price(record["price"])
-            if numeric_price == float('inf'):
+            # Filtrer si le prix est infini, égal à 0.00 ou NaN
+            if numeric_price == float('inf') or numeric_price == 0.0 or math.isnan(numeric_price):
                 continue
+            # Déduplication basée sur l'URL du produit
+            product_url = record.get("productURL", "").strip()
+            if product_url:
+                if product_url in seen_urls:
+                    continue
+                seen_urls.add(product_url)
             record = compute_deal_attributes(record)
             filtered_results.append(record)
         
