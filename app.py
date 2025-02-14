@@ -35,7 +35,7 @@ firebase_auth = firebase.auth()
 # --- Configuration de l'application Flask ---
 app = Flask(__name__)
 app.secret_key = "votre_secret_key"  # À modifier pour la production
-CORS(app)
+CORS(app, supports_credentials=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 #########################
