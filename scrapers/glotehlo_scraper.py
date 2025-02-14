@@ -66,7 +66,7 @@ def scrape_glotelho(search_term, max_pages=3):
                     records.append({
                         "description": title,
                         "price": price,
-                        "old_price": old_price,
+                        "oldPrice": old_price,
                         "productURL": product_url,
                         "imageURL": image_url,
                         "sourceLogo": "https://glotelho.cm/images/glotelho-ecommerce.jpg",
