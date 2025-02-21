@@ -63,17 +63,18 @@ def scrape_walmart_record(item):
     """
     Extrait les informations d'un produit à partir d'un élément HTML.
     Pour chaque produit, on tente de récupérer :
-      - La description (prioritairement via <span data-automation-id="product-title">)
-      - L'URL du produit (recherche d'un <a> dont le href contient "/ip/")
-      - Le prix (puis converti en FCFA)
-      - Le rating (via data-testid="product-ratings" ou par recherche dans le texte)
-      - L'URL de l'image (depuis <img data-testid="productTileImage">)
+      - La description (via <span data-automation-id="product-title">)
+      - L'URL du produit (via <a> dont le href contient "/ip/")
+      - Le prix (converti en FCFA)
+      - Le rating (via data-testid="product-ratings" ou dans le texte)
+      - L'URL de l'image (via <img data-testid="productTileImage">)
+      - Les frais cachés (par exemple, l'information de livraison)
     """
     try:
         description = "N/A"
         product_url = "N/A"
         
-        # Essai de récupérer le titre/description
+        # Récupération du titre/description
         title_span = item.find("span", {"data-automation-id": "product-title"})
         if title_span:
             description = title_span.get_text(strip=True)
@@ -91,7 +92,7 @@ def scrape_walmart_record(item):
                 if description == "N/A":
                     description = a_tag.get_text(strip=True)
         
-        # Extraction du prix (on prend la première occurrence au format "$xx.xx")
+        # Extraction du prix (première occurrence au format "$xx.xx")
         price = "N/A"
         price_div = item.find("div", {"data-automation-id": "product-price"})
         if price_div:
@@ -107,7 +108,6 @@ def scrape_walmart_record(item):
         if rating_span and rating_span.has_attr("data-value"):
             rating = rating_span["data-value"]
         else:
-            # Recherche dans le texte une mention du type "X out of 5"
             rating_search = re.search(r"(\d+\.\d+)\s*out of\s*5", item.get_text(), re.IGNORECASE)
             if rating_search:
                 rating = rating_search.group(1)
@@ -118,13 +118,20 @@ def scrape_walmart_record(item):
         if image_tag and image_tag.has_attr("src"):
             image_url = image_tag["src"]
         
-        logging.info(f"Produit extrait: {description} - {price} -> {price_fcfa} - Rating: {rating}")
+        # Extraction des frais cachés (par exemple, informations sur la livraison)
+        hidden_fees = "N/A"
+        fees_container = item.find("div", {"data-automation-id": "fulfillment-badge"})
+        if fees_container:
+            hidden_fees = fees_container.get_text(separator=" ", strip=True)
+        
+        logging.info(f"Produit extrait: {description} - {price} -> {price_fcfa} - Rating: {rating} - Frais cachés: {hidden_fees}")
         return {
             "description": description,
             "price": price_fcfa,
             "rating": rating,
             "productURL": product_url,
             "imageURL": image_url,
+            "hiddenFees": hidden_fees,
             "source": "Walmart",
             "sourceLogo": "https://1000logos.net/wp-content/uploads/2017/05/Walmart-Logo.png"
         }
@@ -170,8 +177,7 @@ def scrape_walmart(search_term):
     
     session = requests.Session()
     records = []
-    # Forçage à 5 pages, même si le site en affiche plus
-    pages_to_fetch = list(range(1, 6))
+    pages_to_fetch = list(range(1, 6))  # 5 pages fixes
     
     with ThreadPoolExecutor(max_workers=5) as executor:
         future_to_page = {
@@ -184,7 +190,7 @@ def scrape_walmart(search_term):
                 logging.warning(f"⚠ Aucune donnée récupérée pour la page {page}.")
                 continue
             logging.info(f"📄 Scraping de la page {page}...")
-            # On récupère tous les produits identifiés par un attribut data-item-id
+            # Récupération de tous les produits identifiés par data-item-id
             product_items = soup.find_all("div", {"data-item-id": True})
             for item in product_items:
                 record = scrape_walmart_record(item)
@@ -192,13 +198,13 @@ def scrape_walmart(search_term):
                     records.append(record)
             time.sleep(0.2)
     
-    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source", "sourceLogo"])
+    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "hiddenFees", "source", "sourceLogo"])
     
-    # Déduplication : suppression des doublons basés sur l'URL du produit
+    # Suppression des doublons basés sur l'URL du produit
     if not df.empty:
         df = df.drop_duplicates(subset=["productURL"])
     
-    # Tri des résultats par prix croissant (en extrayant la valeur numérique du prix)
+    # Tri des résultats par prix croissant (extraction de la valeur numérique du prix)
     def parse_price(price_str):
         try:
             return float(price_str.replace(" FCFA", "").replace(",", ""))

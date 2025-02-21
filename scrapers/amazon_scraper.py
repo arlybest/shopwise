@@ -1,15 +1,19 @@
+#!/usr/bin/env python3
 import logging
+import re
+import time
+import random
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import time
 from fake_useragent import UserAgent
-import re  # Pour la recherche d'URL via une expression régulière
-from flask import Flask, jsonify, request
-from flask_cors import CORS  # Pour autoriser les requêtes CORS
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
-# Configuration du logging
+# -----------------------------------------------------------------------------
+# Configuration du Logging
+# -----------------------------------------------------------------------------
 logging.basicConfig(
     filename="amazon_scraper.log", 
     level=logging.INFO, 
@@ -21,21 +25,27 @@ formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 console_handler.setFormatter(formatter)
 logging.getLogger().addHandler(console_handler)
 
+# -----------------------------------------------------------------------------
 # Création de l'application Flask
+# -----------------------------------------------------------------------------
 app = Flask(__name__)
-CORS(app)  # Autorise toutes les origines (vous pouvez restreindre en passant des arguments)
+CORS(app)  # Autorise toutes les origines
 
+# -----------------------------------------------------------------------------
+# Fonctions Utilitaires
+# -----------------------------------------------------------------------------
 def get_url(search_term, page=1):
-    """Génère l'URL de recherche Amazon pour le mot-clé donné et la page spécifiée."""
+    """
+    Génère l'URL de recherche Amazon pour le mot-clé donné et la page spécifiée.
+    """
     base = "https://www.amazon.com/s"
     search_term = search_term.replace(" ", "+")
     return f"{base}?k={search_term}&page={page}"
 
 def convert_price_to_fcfa(price_str):
     """
-    Détecte l'unité de prix et convertit le montant en FCFA.
-    
-    Facteurs de conversion (valeurs approximatives) :
+    Convertit un montant exprimé en devise (€, $, £) en FCFA.
+    Facteurs de conversion approximatifs :
       - Dollar ($) : 600 FCFA par USD
       - Euro (€)   : 655.957 FCFA par EUR
       - Livre sterling (£) : 800 FCFA par GBP
@@ -58,9 +68,8 @@ def convert_price_to_fcfa(price_str):
         conversion_factor = 600.0
         price_numeric_str = price_str
 
-    # Supprimer tout ce qui n'est pas chiffre, virgule ou point
+    # Conserver uniquement chiffres, virgule et point
     price_numeric_str = re.sub(r"[^\d,\.]", "", price_numeric_str)
-    # S'il y a une seule virgule et pas de point, elle est probablement décimale
     if price_numeric_str.count(",") == 1 and "." not in price_numeric_str:
         price_numeric_str = price_numeric_str.replace(",", ".")
     else:
@@ -76,15 +85,17 @@ def convert_price_to_fcfa(price_str):
 
 def scrape_records(item):
     """
-    Extrait les informations d'un produit en tenant compte de la nouvelle structure HTML.
-    On récupère :
-      - la description et l'URL du produit depuis le conteneur data-cy="title-recipe" (avec fallback),
-      - le prix depuis le conteneur data-cy="price-recipe" (converti en FCFA),
-      - le rating depuis le span "a-icon-alt",
-      - l'URL de l'image depuis l'élément <img class="s-image">,
-      - et la source "Amazon".
+    Extrait les informations d'un produit à partir d'un élément HTML.
+    Récupère :
+      - La description et l'URL du produit,
+      - Le prix (converti en FCFA),
+      - Le rating,
+      - L'URL de l'image,
+      - Les frais cachés (exemple : frais de livraison convertis en FCFA),
+      - La source (Amazon).
     """
     try:
+        # Description et URL
         description = "N/A"
         product_url = "N/A"
         title_container = item.select_one("div[data-cy='title-recipe']")
@@ -99,6 +110,7 @@ def scrape_records(item):
             a_tag = title_container.find("a")
             if a_tag and a_tag.has_attr("href"):
                 product_url = "https://amazon.com" + a_tag["href"]
+        # Fallback en cas d'absence du container principal
         if product_url == "N/A":
             a_tag = item.find("a", href=re.compile("/dp/"))
             if a_tag and a_tag.has_attr("href"):
@@ -108,25 +120,39 @@ def scrape_records(item):
                 if alt_title:
                     description = alt_title.get_text(strip=True)
         
+        # Prix principal
         price_container = item.select_one("div[data-cy='price-recipe'] span.a-offscreen")
         price = price_container.get_text(strip=True) if price_container else "N/A"
         price_fcfa = convert_price_to_fcfa(price)
 
+        # Rating
         rating_container = item.select_one("span.a-icon-alt")
         rating = rating_container.get_text(strip=True) if rating_container else "No Rating"
 
+        # Image URL
         image_container = item.find("img", class_="s-image")
         image_url = image_container.get("src") if image_container else "N/A"
 
-        logging.info(f"✔ Produit extrait : {description} - {price} -> {price_fcfa}")
+        # Extraction des frais cachés (exemple : frais de livraison)
+        hidden_fees_container = item.select_one("div[data-cy='delivery-recipe'] span.a-color-base")
+        if hidden_fees_container:
+            hidden_fees_text = hidden_fees_container.get_text(strip=True)
+            # Suppression du préfixe "Livraison à" s'il existe
+            hidden_fees_text = hidden_fees_text.replace("Livraison à", "").strip()
+            hidden_fees_fcfa = convert_price_to_fcfa(hidden_fees_text)
+        else:
+            hidden_fees_fcfa = "N/A"
+
+        logging.info(f"✔ Produit extrait : {description} - {price} -> {price_fcfa} | Frais cachés : {hidden_fees_fcfa}")
         return {
             "description": description,
             "price": price_fcfa,
             "rating": rating,
             "productURL": product_url,
             "imageURL": image_url,
+            "hiddenFees": hidden_fees_fcfa,
             "sourceLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-            "source":"Amazon"
+            "source": "Amazon"
         }
     
     except Exception as e:
@@ -134,22 +160,29 @@ def scrape_records(item):
         return None
 
 def fetch_page(session, search_term, page, headers):
-    """Récupère et parse une page donnée pour un terme de recherche."""
+    """
+    Récupère et parse une page donnée pour un terme de recherche.
+    Implémente une stratégie de retry en cas d'échec.
+    """
     url = get_url(search_term, page)
     logging.info(f"🌐 Récupération de la page {page} : {url}")
-    try:
-        response = session.get(url, headers=headers)
-        if response.status_code == 200:
-            return page, BeautifulSoup(response.content, "html.parser")
-        else:
-            logging.error(f"❌ Erreur lors de la récupération de la page {page}, code HTTP : {response.status_code}")
-            return page, None
-    except Exception as e:
-        logging.error(f"❌ Exception lors de la récupération de la page {page} : {e}")
-        return page, None
+    for attempt in range(3):  # 3 tentatives maximum
+        logging.info(f"🔄 Tentative {attempt+1} pour la page {page}")
+        try:
+            response = session.get(url, headers=headers, timeout=10)
+            if response.status_code == 200:
+                return page, BeautifulSoup(response.content, "html.parser")
+            else:
+                logging.error(f"❌ Erreur HTTP {response.status_code} pour la page {page}")
+        except Exception as e:
+            logging.error(f"❌ Exception lors de la récupération de la page {page} : {e}")
+        time.sleep(1)  # Pause avant de réessayer
+    return page, None
 
 def scrape_amazon(search_term):
-    """Scrape les résultats Amazon pour le terme de recherche donné pour 5 pages en parallèle."""
+    """
+    Scrape les résultats Amazon pour le terme de recherche donné sur 5 pages en parallèle.
+    """
     logging.info(f"🔍 Démarrage du scraping pour : {search_term}")
     
     ua = UserAgent()
@@ -185,15 +218,13 @@ def scrape_amazon(search_term):
                 record = scrape_records(item)
                 if record:
                     records.append(record)
-            # Pause très courte pour limiter la charge (réduite pour plus de rapidité)
-            time.sleep(0.2)
+            time.sleep(0.2)  # Pause très courte pour limiter la charge
     
-    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "source","sourceLogo"])
+    df = pd.DataFrame(records, columns=["description", "price", "rating", "productURL", "imageURL", "hiddenFees", "source", "sourceLogo"])
     
-    # Tri des résultats par prix décroissant
+    # Tri des résultats par prix croissant
     def parse_price(price_str):
         try:
-            # Suppression du suffixe et des séparateurs
             return float(price_str.replace(" FCFA", "").replace(",", ""))
         except Exception:
             return 0.0
@@ -204,7 +235,9 @@ def scrape_amazon(search_term):
     
     return df
 
-# Définition de l'endpoint Flask
+# -----------------------------------------------------------------------------
+# Définition de l'Endpoint Flask
+# -----------------------------------------------------------------------------
 @app.route('/search', methods=['GET'])
 def search():
     query = request.args.get("query")
@@ -217,5 +250,28 @@ def search():
     else:
         return jsonify({"error": "Aucune donnée extraite."}), 404
 
+# -----------------------------------------------------------------------------
+# Code de Test Initial et Démarrage de l'Application
+# -----------------------------------------------------------------------------
 if __name__ == "__main__":
+    # Partie test : Récupération d'une page pour vérifier la configuration des headers
+    ua = UserAgent()
+    test_headers = {
+        "User-Agent": ua.random,
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    test_url = "https://www.amazon.com/s?k=macbook&page=1"
+    try:
+        response = requests.get(test_url, headers=test_headers, timeout=10)
+        if response.status_code == 200:
+            logging.info("✅ Succès ! Contenu récupéré pour le test initial.")
+        else:
+            logging.error(f"❌ Erreur {response.status_code} - Impossible d'accéder à la page pour le test initial.")
+    except Exception as e:
+        logging.error(f"❌ Exception lors du test initial : {e}")
+
+    # Démarrage du serveur Flask sur le port 5000
     app.run(debug=True, host='0.0.0.0', port=5000)
